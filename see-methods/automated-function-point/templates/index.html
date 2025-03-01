@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Point Estimator</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        input { margin: 10px; padding: 8px; }
+        button { padding: 10px; cursor: pointer; }
+        #result { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h2>Upload Python File for Effort Estimation</h2>
+    <input type="file" id="fileInput">
+    <button onclick="uploadFile()">Estimate</button>
+    <div id="result"></div>
+
+    <script>
+        function uploadFile() {
+            let fileInput = document.getElementById('fileInput').files[0];
+            if (!fileInput) {
+                alert('Please select a file first.');
+                return;
+            }
+
+            let formData = new FormData();
+            formData.append('file', fileInput);
+
+            fetch('/estimate', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').innerHTML =
+                    `Function Points: ${data.FunctionPoints} <br>
+                    Estimated Effort Hours: ${data.EstimatedEffortHours}`;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
