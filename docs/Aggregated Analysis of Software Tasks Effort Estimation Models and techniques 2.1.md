@@ -8,12 +8,8 @@
 
 **72000901**
 
-**Aggregated analysis of**
-
-` `**Software Effort Estimation**
-
-` `**Models and techniques**
-
+<p style="text-align:center;">
+Aggregated analysis of Software Effort Estimation Models and techniques</p>
 
 **Submitted by:**
 
