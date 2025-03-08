@@ -1,12 +1,12 @@
-Briefing Document: OSS Effort Estimation Using Software Features Similarity and Developer Activity-Based Metrics
+### Briefing Document: OSS Effort Estimation Using Software Features Similarity and Developer Activity-Based Metrics
 [Ritu Kapur and Balwinder Sodhi. 2022. OSS Effort Estimation Using Software Features Similarity and Devel-
 oper Activity-Based Metrics. ACM Trans. Softw. Eng. Methodol. 31, 2, Article 33 (February 2022), 35 pages.]
 
-1. Overview
+### 1. Overview
 
 This research paper presents a novel method for estimating the effort required to develop software, particularly within the realm of Open Source Software (OSS). The core concept is to leverage developer activity information from past software projects, combined with a similarity detection model, to predict the effort needed for a new, envisioned software project. The authors are R. Kapur and B. Sodhi, from the Department of Computer Science and Engineering, Indian Institute of Technology Ropar, India.
 
-2. Key Themes and Ideas
+### 2. Key Themes and Ideas
 
 Software Development Effort Estimation (SDEE): The paper addresses the challenge of accurately predicting the effort (e.g., person-months) needed to develop software. It acknowledges existing SDEE methods (expert-based, algorithmic, and hybrid) but aims to improve accuracy by incorporating developer activity and software similarity.
 Developer Activity Information: A central tenet of the research is that metrics derived from developer activity within OSS repositories provide valuable insights into development effort. Specifically, the paper defines developer activity information as:
@@ -21,7 +21,8 @@ SDEE Metrics: The paper proposes new SDEE metrics based on developer activity in
 Tr: The total time spent in developing the software (calculated based on release start and end times).
 er: The effort expended to develop the software, calculated as the product of the number of developers and the development time (er = |Dr| ∗ tr).
 GitHub as a Data Source: The research relies heavily on GitHub as a source of data for developer activity and software project descriptions. The authors systematically downloaded and processed information from GitHub repositories belonging to specific software categories.
-3. Methodology and Approach
+
+### 3. Methodology and Approach
 
 The paper outlines a multi-step approach:
 
@@ -31,7 +32,8 @@ Downloading software project descriptions from corresponding GitHub repositories
 Similarity Model Training:Training a software similarity detection model using the PVA on the project description documents from the dataset.
 SDEE Tool Development:Designing a GUI for user interaction.
 Computing effort estimates for a newly envisioned software project by leveraging the SDEE dataset and PVA vectors.
-4. Design Considerations
+
+### 4. Design Considerations
 
 The authors address several important design decisions in their approach:
 
@@ -40,7 +42,8 @@ GitHub Selection: Justifying the choice of GitHub as the primary data source and
 Developer Activity Information: Defining which developer activity information to collect and how to extract it from repositories.
 Software Similarity Measurement: Explaining the rationale for using vector representations (PVA) for software product descriptions and determining the appropriate similarity threshold.
 Effort Estimate Calculation: Describing how to combine the effort values of similar software projects to arrive at a final estimate (using Walkerden's triangle function). "If the effort estimates of the first, second, and third closest neighbors are a, b, and c, respectively, then the effort required to develop z is expressed as Effort (z)= (3a + 2b + 1c )/6."
-5. Experimental Evaluation
+
+### 5. Experimental Evaluation
 
 The paper details several experiments conducted to evaluate the performance of the proposed SDEE method, comparing it to existing techniques like ATLM (algorithmic), NeuralNet, ABE (Analogy-Based Estimation) and LOC (Lines of Code) straw man estimators. Key aspects of the experimental setup include:
 
@@ -59,13 +62,15 @@ Experiment #6: A test to validate the performance of the tool by professional pr
 Results:
 "Our system achieves the highest SA of 87.26% (Cliff’s δ = 0.88) when compared with the LOC straw man estimator and 42.7% (Cliff’s δ = 0.74) with the ATLM method at 99% confidence level (p < 0.00001)."
 The tool is available at https://doi.org/10.21227/d6qp-2n13 and https://doi.org/10.5281/zenodo.5095723.
-6. Threats to Validity
+
+### 6. Threats to Validity
 
 The authors acknowledge potential threats to the validity of their findings:
 
 Internal Validity: Handling corner cases like refactoring and removing outliers from the dataset.
 External Validity: The limitations of generalizing the results to software projects outside of the OSS context.
 Statistical Conclusion Validity: Performing several statistical experiments with a 95% or greater confidence level to validate efficacy.
-7. Conclusion and Future Work
+
+### 7. Conclusion and Future Work
 
 The paper concludes that developer activity metrics, combined with PVA-based software similarity detection, can lead to more accurate and reliable SDEE. The authors suggest future work to include incremental effort estimates, developer characteristics, geographical location, and social interactions in the model.
