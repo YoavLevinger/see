@@ -164,3 +164,7 @@ This table contains **aggregated effort estimates** for repositories.
 
 ---
 
+we can assume:
+
+- 1 person-month = ~160 hours (standard work hours in a month).
+- 1 person-month = ~20 workdays.
