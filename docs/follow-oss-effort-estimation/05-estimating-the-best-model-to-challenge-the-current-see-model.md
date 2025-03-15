@@ -45,4 +45,3 @@ XGBoost is a **powerful gradient boosting algorithm** that surpasses traditional
 | **LOC Straw Man** | 87.26%       | Low                         | Poor                     |
 | **DevSDEE** | 87.26%             | High                        | High                     |
 | **XGBoost (Proposed)** | **>90% (Expected)** | **Very High** | **Very High** |
-
