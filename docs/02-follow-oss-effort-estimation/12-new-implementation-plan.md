@@ -212,9 +212,4 @@ def predict_effort(description: str, num_files_dirs: int, size_kb: float, langua
 | **Scalability** | Medium | **High (Optimized for growth)** |
 
 ---
-## ✅ **Next Steps**
-Would you like:
-1. **A fully packaged script?**
-2. **Docker containerization for easy deployment?**
-3. **Integration into your existing pipeline?**
 
