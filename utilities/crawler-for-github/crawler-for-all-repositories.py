@@ -106,7 +106,7 @@ def main(mode="all"):
     # Define database paths
     clean_sql_path = 'sdee_lite_cleaned.sql'
     new_db_path = 'sdee-with-description/sdee_lite_description.db'
-    new_sql_path = 'sdee-with-description/sdee_lite_description.sql'
+    new_sql_path = '../../docs/03-new-data-analysis-of-open-source-software-projects/dataset/sdee_lite_description.sql'
 
     # Connect to SQLite (in-memory database)
     conn = sqlite3.connect(":memory:")
