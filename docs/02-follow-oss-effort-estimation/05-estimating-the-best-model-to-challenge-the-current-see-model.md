@@ -1,47 +1,68 @@
-# **Manual for Estimating the Best Model to Challenge the Current SEE Model**
+### **1. Algorithms with Better Potential:**
+These algorithms could improve the **accuracy and robustness** of software effort estimation.
 
-## **Introduction**
-This is a structured approach to selecting the best algorithm to surpass the current **Software Effort Estimation (SEE) model**, as described in the article *"OSS Effort Estimation Using Software Features Similarity and Developer Activity-Based Metrics."* The goal is to evaluate various machine learning algorithms and determine the one with the highest potential to improve accuracy and efficiency.
+#### **A. Transformer-based Text Embeddings (Best Alternative to PVA)**
+- **Why?**  
+  - PVA (Paragraph Vector Algorithm) is good, but **transformer-based models like BERT, RoBERTa, or Sentence-BERT (SBERT)** would generate **better** embeddings for software descriptions.
+  - These models capture **semantic meaning** better than PVA.
+- **Potential Improvement:**  
+  - Could **increase accuracy from 87.26% to ~92-95%** in similarity detection.
+  - Better **handling of synonyms and contextual meaning** in software descriptions.
+
+#### **B. k-Nearest Neighbors (kNN) with Transformer Embeddings**
+- **Why?**  
+  - kNN was mentioned in the research as an alternative but wasn't used.
+  - kNN on top of **better embeddings (from SBERT/RoBERTa)** would improve similar software project retrieval.
+- **Potential Improvement:**  
+  - Helps detect **better matches** for effort estimation.
+  - If paired with a **weighted similarity approach**, could refine the top-k matches.
+
+#### **C. Random Forest or XGBoost for Effort Prediction**
+- **Why?**  
+  - Current estimation uses **Walkerden’s Triangle Function**, which is a **simple weighted average method**.
+  - **Random Forest/XGBoost** would learn **non-linear** relationships between **similar projects’ effort values** and **developer activity features**.
+- **Potential Improvement:**  
+  - Could **reduce mean absolute error (MAE)** significantly.
+  - Learns **complex dependencies** in effort estimation beyond just averaging.
+
+#### **D. Neural Network-Based Regression**
+- **Why?**  
+  - The research **didn’t use neural networks (like MLPs, Transformers, or LSTMs)** for prediction.
+  - Training a **simple Multi-Layer Perceptron (MLP)** on top of **PVA/SBERT embeddings** and **developer activity data** would improve the effort estimation.
+- **Potential Improvement:**  
+  - Could outperform **Walkerden’s Triangle Function** by **learning from multiple software projects dynamically**.
 
 ---
 
-## **1. Criteria for Selecting a Superior SEE Model**
-To surpass the current SEE model, the new algorithm should:
-- **Improve accuracy**: Reduce error metrics such as **MRE, MMRE, MAR, and RE\***.
-- **Enhance generalization**: Perform well on unseen data via **cross-validation**.
-- **Be computationally efficient**: Handle large datasets with minimal processing time.
-- **Reduce overfitting**: Implement regularization or ensemble techniques to ensure robustness.
+### **2. Potential New Model Architecture**
+If you want a **better effort estimation pipeline**, you could structure it like this:
+
+1. **Text Embedding (Replace PVA)**
+   - **Use SBERT/RoBERTa instead of PVA** for representing software descriptions.
+   - **Alternative:** Use **TF-IDF + Word2Vec hybrid** if deep learning isn't an option.
+
+2. **Similar Project Retrieval**
+   - Use **Cosine Similarity on SBERT embeddings** (better than PVA-based similarity).
+   - **Alternative:** Try **kNN (k = 5 or 10) on embedding space**.
+
+3. **Effort Estimation Model**
+   - Instead of **Walkerden’s Triangle Function**, try:
+     - **Random Forest/XGBoost** (good interpretability)
+     - **Neural Network Regression (MLP/LSTM/Transformer)**
 
 ---
 
-## **2. Evaluated Algorithms**
-The following algorithms were considered based on their suitability for effort estimation:
-
-| **Algorithm**             | **Estimation (Potential Improvement)** | **Reason** |
-|---------------------------|--------------------------------------|------------|
-| **XGBoost (Extreme Gradient Boosting)** | ⭐⭐⭐⭐⭐ (Very High) | Optimized version of GBM with **parallelization, regularization, and efficient memory usage**. Likely to outperform existing SEE models. |
-| **Random Forests**         | ⭐⭐⭐⭐ (High) | Uses multiple decision trees to reduce overfitting and improve generalization. Good for non-linear relationships. |
-| **Support Vector Machines (SVM)** | ⭐⭐⭐⭐ (High) | Effective in high-dimensional spaces, robust against overfitting, and performs well in regression tasks. |
-| **Neural Networks**        | ⭐⭐⭐ (Moderate-High) | Can capture complex relationships but **requires extensive tuning and large datasets** to avoid overfitting. |
-| **k-Nearest Neighbors (k-NN)** | ⭐⭐ (Moderate) | Effective for small datasets, but computationally expensive and **struggles with complex relationships**. |
-| **Linear Regression Variants (Lasso, Ridge, ElasticNet)** | ⭐⭐ (Moderate) | Works well for **linear relationships**, but lacks power for complex software effort estimation. |
-| **Bayesian Regression** | ⭐ (Low-Moderate) | Can improve estimation with **probabilistic modeling**, but may struggle with large, complex datasets. |
+### **3. Expected Benefits of These Changes**
+| Change                                | Potential Gain |
+|---------------------------------------|---------------|
+| **SBERT/RoBERTa for embeddings**      | +5-8% accuracy in software matching |
+| **kNN with better embeddings**        | More relevant similar projects |
+| **Random Forest/XGBoost for effort**  | Better non-linear relationship learning |
+| **Neural Network Regression**         | Dynamic learning, higher accuracy |
 
 ---
 
-## **3. Best Candidate: XGBoost**
-### **Why XGBoost is the Best Choice?**
-XGBoost is a **powerful gradient boosting algorithm** that surpasses traditional models like **GBM, ATLM, and ABE** due to:
-- **Faster Execution:** Uses **histogram-based split finding** and parallelized execution.
-- **Better Generalization:** Incorporates **L1 and L2 regularization** to prevent overfitting.
-- **Robust Handling of Missing Data:** Automatically detects missing values.
-- **Built-in Cross-Validation & Early Stopping:** Optimizes hyperparameters efficiently.
+### **4. Final Recommendation**
+- **only change one thing**, **replace PVA with SBERT/RoBERTa embeddings**.  
+- **want maximum improvement**, use a **full pipeline upgrade** (SBERT + kNN + XGBoost/MLP).
 
-### **Comparison with Existing SEE Models**
-| **Model** | **Accuracy (SA %)** | **Computational Efficiency** | **Overfitting Control** |
-|-----------|---------------------|-----------------------------|--------------------------|
-| **ATLM**  | 42.7%               | Moderate                    | Low                      |
-| **ABE**   | ~50-60%             | Low                         | Moderate                  |
-| **LOC Straw Man** | 87.26%       | Low                         | Poor                     |
-| **DevSDEE** | 87.26%             | High                        | High                     |
-| **XGBoost (Proposed)** | **>90% (Expected)** | **Very High** | **Very High** |

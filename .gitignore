@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+docs/required-articles.md
+
+
 # Distribution / packaging
 .Python
 build/
