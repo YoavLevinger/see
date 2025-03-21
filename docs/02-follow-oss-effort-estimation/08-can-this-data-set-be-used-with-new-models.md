@@ -79,7 +79,7 @@ Example:
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 from nltk.tokenize import word_tokenize
 
-# Example dataset
+# Example 02-dataset
 new_text_data = [
     "An AI chatbot for customer support using NLP",
     "A cloud-based image recognition system",
