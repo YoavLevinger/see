@@ -1,0 +1,840 @@
+Database loaded successfully!
+GitHub API Rate Limit Remaining: 4896, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 4839, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 4779, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 4722, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 4668, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 4611, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 4554, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 4500, Resets at: Sat Mar 22 11:50:42 2025
+Error fetching developer metrics for riobard/go-sendcloud: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+GitHub API Rate Limit Remaining: 4454, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 4400, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 4349, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 4289, Resets at: Sat Mar 22 11:50:42 2025
+Error fetching developer metrics for sbstjn/timesheet.js: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+GitHub API Rate Limit Remaining: 4238, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 4181, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 4121, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 4061, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 4004, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 3944, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 3884, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 3830, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 3770, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 3716, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 3659, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 3602, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 3557, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 3500, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 3440, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 3380, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 3320, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 3260, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 3200, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 3149, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 3089, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 3035, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 2981, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 2924, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 2870, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 2816, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 2756, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 2699, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 2642, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 2585, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 2540, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 2480, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 2420, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 2366, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 2309, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 2255, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 2195, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 2144, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 2087, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 2030, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 1979, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 1925, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 1883, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 1832, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 1772, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 1715, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 1664, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 1604, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 1544, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 1490, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 1430, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 1370, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 1313, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 1253, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 1196, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 1145, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 1088, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 1040, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 986, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 926, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 875, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 821, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 776, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 725, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 674, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 626, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 566, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 509, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 455, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 398, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 338, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 281, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 224, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 164, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 110, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 62, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 5, Resets at: Sat Mar 22 11:50:42 2025
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 11:50:42 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 11:50:42 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 11:50:42 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 11:50:42 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 11:50:42 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 11:50:42 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 11:50:42 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 11:50:42 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 11:50:42 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 11:50:42 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 11:50:42 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 4949, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 4892, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 4838, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 4790, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 4730, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 4670, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 4613, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 4553, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 4493, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 4433, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 4376, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 4319, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 4259, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 4199, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 4142, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 4091, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 4031, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 3974, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 3920, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 3863, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 3809, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 3752, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 3698, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 3647, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 3599, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 3545, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 3485, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 3428, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 3380, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 3323, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 3266, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 3218, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 3167, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 3116, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 3062, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 3023, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 2969, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 2918, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 2864, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 2804, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 2744, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 2687, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 2627, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 2567, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 2510, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 2450, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 2390, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 2333, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 2273, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 2216, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 2156, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 2096, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 2036, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 1982, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 1925, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 1871, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 1811, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 1751, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 1697, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 1646, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 1592, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 1541, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 1487, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 1427, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 1370, Resets at: Sat Mar 22 12:51:21 2025
+Error fetching developer metrics for viezel/napp.alloy.adapter.restapi: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+GitHub API Rate Limit Remaining: 1318, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 1261, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 1204, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 1147, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 1090, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 1036, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 979, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 931, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 877, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 829, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 781, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 730, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 688, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 628, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 574, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 529, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 475, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 418, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 358, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 310, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 250, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 190, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 136, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 91, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 40, Resets at: Sat Mar 22 12:51:21 2025
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 12:51:21 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 4946, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 4886, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 4829, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 4775, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 4718, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 4667, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 4607, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 4562, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 4514, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 4466, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 4406, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 4352, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 4292, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 4232, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 4175, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 4115, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 4055, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 4007, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 3953, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 3896, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 3839, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 3788, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 3734, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 3692, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 3644, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 3590, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 3530, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 3473, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 3416, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 3368, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 3314, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 3263, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 3206, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 3149, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 3104, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 3044, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 2987, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 2936, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 2885, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 2831, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 2774, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 2723, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 2672, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 2618, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 2573, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 2519, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 2462, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 2408, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 2351, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 2294, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 2237, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 2177, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 2117, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 2060, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 2003, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 1946, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 1892, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 1835, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 1775, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 1718, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 1658, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 1598, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 1544, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 1487, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 1430, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 1376, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 1319, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 1262, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 1202, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 1145, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 1091, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 1034, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 977, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 917, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 860, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 803, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 746, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 689, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 632, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 578, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 530, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 485, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 434, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 377, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 317, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 263, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 206, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 149, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 92, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 32, Resets at: Sat Mar 22 13:51:53 2025
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 13:51:53 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 4946, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 4892, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 4838, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 4787, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 4727, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 4679, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 4628, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 4571, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 4520, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 4463, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 4406, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 4349, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 4289, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 4229, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 4178, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 4127, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 4070, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 4019, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 3965, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 3911, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 3854, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 3794, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 3743, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 3689, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 3641, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 3581, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 3527, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 3467, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 3416, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 3359, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 3299, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 3239, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 3179, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 3119, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 3059, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 3002, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 2954, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 2903, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 2852, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 2804, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 2750, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 2693, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 2639, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 2585, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 2528, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 2477, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 2417, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 2366, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 2309, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 2249, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 2195, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 2153, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 2096, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 2048, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 2012, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 1961, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 1904, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 1844, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 1790, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 1733, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 1679, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 1619, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 1565, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 1511, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 1457, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 1397, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 1337, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 1280, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 1220, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 1160, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 1103, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 1043, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 986, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 929, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 869, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 809, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 758, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 713, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 659, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 620, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 566, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 509, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 449, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 392, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 332, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 278, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 221, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 164, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 107, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 56, Resets at: Sat Mar 22 14:52:47 2025
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 14:52:47 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 4997, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 4943, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 4889, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 4835, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 4778, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 4724, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 4667, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 4607, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 4547, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 4487, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 4430, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 4370, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 4313, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 4256, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 4199, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 4148, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 4094, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 4037, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 3980, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 3920, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 3863, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 3806, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 3752, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 3704, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 3650, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 3596, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 3545, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 3491, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 3431, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 3371, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 3317, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 3263, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 3203, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 3155, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 3098, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 3041, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 2981, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 2930, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 2873, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 2822, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 2774, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 2717, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 2657, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 2600, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 2540, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 2483, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 2423, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 2369, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 2315, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 2261, Resets at: Sat Mar 22 15:52:48 2025
+Error fetching developer metrics for paolorotolo/android-studio: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+GitHub API Rate Limit Remaining: 2214, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 2157, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 2100, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 2049, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 1992, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 1935, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 1875, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 1818, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 1764, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 1722, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 1665, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 1614, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 1566, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 1506, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 1452, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 1392, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 1332, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 1272, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 1215, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 1158, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 1098, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 1047, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 993, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 933, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 882, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 825, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 771, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 723, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 669, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 618, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 561, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 504, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 447, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 387, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 333, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 273, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 219, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 174, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 117, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 60, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 12, Resets at: Sat Mar 22 15:52:48 2025
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 0, Resets at: Sat Mar 22 15:52:48 2025
+Rate limit exceeded, waiting for reset...
+GitHub API Rate Limit Remaining: 4940, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 4889, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 4838, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 4781, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 4724, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 4670, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 4616, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 4556, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 4499, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 4439, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 4382, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 4325, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 4280, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 4229, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 4172, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 4121, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 4064, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 4010, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 3953, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 3896, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 3851, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 3794, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 3740, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 3686, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 3629, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 3569, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 3509, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 3452, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 3395, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 3335, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 3275, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 3224, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 3170, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 3119, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 3068, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 3014, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 2957, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 2903, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 2846, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 2789, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 2738, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 2678, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 2630, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 2579, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 2519, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 2462, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 2405, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 2345, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 2288, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 2231, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 2177, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 2120, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 2066, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 2012, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 1958, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 1904, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 1850, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 1808, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 1748, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 1688, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 1631, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 1580, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 1523, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 1469, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 1409, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 1352, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 1292, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 1232, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 1178, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 1121, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 1067, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 1013, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 953, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 893, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 833, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 773, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 713, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 656, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 599, Resets at: Sat Mar 22 16:52:54 2025
+GitHub API Rate Limit Remaining: 548, Resets at: Sat Mar 22 16:52:54 2025
+
+First 5 rows of table: avg_repo_effort
+         owner             repo  devCount  ...  modLOC       daf       effort
+0  0xInfection  TIDoS-Framework         3  ...  128963  126698.5     5.259819
+1         10up     ElasticPress         3  ...     509     225.5     7.621617
+2         10up          wp_mock         5  ...    1841    1048.0     3.500248
+3        1and1          Troilus         5  ...   16647    7089.0     5.511662
+4          1N3           Sn1per         3  ...  129485   69343.0  2847.302522
+
+[5 rows x 8 columns]
+
+First 5 rows of table: features
+           owner                          repo  SLOC  devCount  months  effort
+0        mongodb               mongosql-auth-c  4588         4   13.33   53.32
+1         jeroen                     mongolite   502         1    1.30    1.30
+2       Ericsson      CodeCheckerEclipsePlugin  3253         3    3.07    9.21
+3  VioletGiraffe             cppcheck-vs-addin  1811         7   29.47  206.29
+4          medcl  elasticsearch-analysis-mmseg   893         2   15.57   31.14
+
+First 5 rows of table: release_info
+         owner                    repo release_no release_date           size
+0      hsbalar                 batcave     v1.0.0   2017-01-16      44.067121
+1     mblarsen         mongoose-hidden     v1.5.0   2017-10-27  not specified
+2  ericmdantas  generator-ng-fullstack     v1.8.0   2016-05-04  not specified
+3  ericmdantas  generator-ng-fullstack     v1.7.0   2016-03-31  not specified
+4  ericmdantas  generator-ng-fullstack     v1.6.0   2016-03-14  not specified
+
+First 5 rows of table: release_wise_effort
+     owner             repo  ...   effPutnmTm effEffortTotlTm
+0  mongodb  mongosql-auth-c  ...    19.276280    1.482084e-10
+1  mongodb  mongosql-auth-c  ...    80.594593    1.337855e-09
+2  mongodb  mongosql-auth-c  ...   475.160291    4.145455e-08
+3  mongodb  mongosql-auth-c  ...  1060.172184    1.489291e-07
+4  mongodb  mongosql-auth-c  ...   242.221581    3.557147e-07
+
+[5 rows x 16 columns]
+
+First 5 rows of table: repo_info_pv_vec
+                  category  ...   cos_sim
+0  configuration_libraries  ...  1.000000
+1  configuration_libraries  ... -0.122843
+2  configuration_libraries  ... -0.129983
+3  configuration_libraries  ...  0.240423
+4  configuration_libraries  ... -0.061511
+
+[5 rows x 5 columns]
+
+First 5 rows of table: repo_additional_info
+             owner          repo  ... sloc_deleted  sloc_modified
+0             juxt          aero  ...            0              0
+1               pd         figgy  ...            0              0
+2  kelseyhightower     envconfig  ...            0              0
+3      JeffGarland      liaw2015  ...            0              0
+4      taneryilmaz  libconfigini  ...            0              0
+
+[5 rows x 13 columns]
+Database saved as sdee_lite_description.db and SQL script saved as sdee_lite_description.sql
+
+Process finished with exit code 0

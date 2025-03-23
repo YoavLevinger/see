@@ -1,0 +1,4 @@
+loc,cyclomatic_complexity,halstead_volume,function_count,commits,contributors,lines_added,lines_deleted,owner,repo,language,complexity_score,estimated_effort_hours
+0,0,0.0,0,15,2,1796,149,neva-dev,javarel-osgi-plugin,Groovy,0.0,50.0
+1117,329,3793.5,304,9,1,3832,149,AndyObtiva,DatingNetwork,PHP,0.0839,129.7
+22996,5096,249217.5,2804,2195,230,103727,61657,lovell,sharp,JavaScript,1.9048,1859.56
