@@ -179,3 +179,4 @@ docs/git-ignored-folder/
 /see-methods/02-enhanced-oss-see/04-vectorizing-description-field/sdee_lite_description_vectorized.sql
 /see-methods/02-enhanced-oss-see/07-test-sbert/sdee_lite_description_vectorized-large.sql
 see-methods/02-enhanced-oss-see/07-test-sbert/sdee_lite_description_vectorized.sql
+/llm-pipeline/generated-code/
