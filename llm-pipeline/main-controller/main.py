@@ -30,4 +30,7 @@ def handle_description(input: DescriptionInput):
     }
     requests.post("http://localhost:8003/handle", json=payload)
 
-    return {"status": "done", "folder": folder_id}
+    # Create document
+    requests.post("http://localhost:8004/create", json=payload)
+
+    return {"status": "done", "folder": folder_id, "download": f"http://localhost:8004/download/{folder_id}"}

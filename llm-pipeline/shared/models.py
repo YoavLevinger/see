@@ -15,3 +15,8 @@ class ToolXRequest(BaseModel):
     folder: str
     description: str
     subtasks: List[str]
+
+class DocRequest(BaseModel):
+    folder: str
+    description: str
+    subtasks: List[str]

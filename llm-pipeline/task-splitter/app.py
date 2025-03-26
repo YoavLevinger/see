@@ -20,8 +20,6 @@ def split_description(task: TaskRequest):
     )
     llm_output = ask_llm(prompt)
 
-    # Parse output into a list
     subtasks = [line.split(". ", 1)[1] for line in llm_output.strip().splitlines() if ". " in line]
 
     return SubTaskResponse(subtasks=subtasks)
-

@@ -10,6 +10,10 @@ def handle_input(req: ToolXRequest):
     print("Description:", req.description)
     print("Folder:", req.folder)
     print("Subtasks:", req.subtasks)
-    print("Files:", os.listdir(os.path.join("generated-code", req.folder)))
+    folder_path = os.path.join("generated-code", req.folder)
+    if os.path.exists(folder_path):
+        print("Files:", os.listdir(folder_path))
+    else:
+        print("Folder does not exist.")
 
     return {"status": "received"}
