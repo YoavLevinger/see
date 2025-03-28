@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from shared.models import ToolXRequest
+from backend.shared.models import ToolXRequest
 import os
 
 app = FastAPI()
@@ -10,7 +10,7 @@ def handle_input(req: ToolXRequest):
     print("Description:", req.description)
     print("Folder:", req.folder)
     print("Subtasks:", req.subtasks)
-    folder_path = os.path.join("generated-code", req.folder)
+    folder_path = os.path.join("backend/generated-code", req.folder)
     if os.path.exists(folder_path):
         print("Files:", os.listdir(folder_path))
     else:

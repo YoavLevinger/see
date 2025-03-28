@@ -1,8 +1,9 @@
 import requests
 from fastapi import FastAPI
-from shared.models import TaskRequest, SubTaskResponse
-
+from backend.shared.models import TaskRequest, SubTaskResponse
+import logging
 app = FastAPI()
+logging.basicConfig(level=logging.INFO)
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL = "mistral"
@@ -21,5 +22,5 @@ def split_description(task: TaskRequest):
     llm_output = ask_llm(prompt)
 
     subtasks = [line.split(". ", 1)[1] for line in llm_output.strip().splitlines() if ". " in line]
-
+    logging.info(f"Split into {len(subtasks)} subtasks.")
     return SubTaskResponse(subtasks=subtasks)

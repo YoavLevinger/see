@@ -1,10 +1,12 @@
 import requests
 from fastapi import FastAPI
-from shared.models import CodeGenRequest
+from backend.shared.models import CodeGenRequest
 import os
 import re
+import logging
 
 app = FastAPI()
+logging.basicConfig(level=logging.INFO)
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL = "mistral"
@@ -20,7 +22,7 @@ def generate_code_from_llm(subtask: str) -> str:
 
 @app.post("/generate")
 def generate_code(req: CodeGenRequest):
-    folder_path = os.path.join("generated-code", req.folder)
+    folder_path = os.path.join("backend/generated-code", req.folder)
     os.makedirs(folder_path, exist_ok=True)
 
     code = generate_code_from_llm(req.subtask)

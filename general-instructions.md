@@ -5,5 +5,6 @@ pip install matplotlib
 pip install sentence-transformers pandas numpy tqdm torch
 
 
-sudo apt update
-sudo apt install wkhtmltopdf
+pip install weasyprint
+sudo apt install libpango-1.0-0 libpangocairo-1.0-0 libcairo2
+

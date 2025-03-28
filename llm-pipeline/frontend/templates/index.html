@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LLM Pipeline UI</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔧 Submit Your Software Task</h1>
+
+    {% if message %}
+      <p class="message">{{ message }}</p>
+    {% endif %}
+
+    <form action="/submit" method="post" enctype="multipart/form-data">
+      <input type="hidden" name="folder_id" value="{{ folder_id }}">
+
+      <label for="description">Software Description:</label><br>
+      <textarea name="description" rows="5" cols="60" required></textarea><br><br>
+
+      <label for="advisors">Select Expert Advisors:</label><br>
+      <input type="checkbox" name="advisors" value="security" checked> Security<br>
+      <input type="checkbox" name="advisors" value="accessibility"> Accessibility<br>
+      <input type="checkbox" name="advisors" value="performance"> Performance<br><br>
+
+      <label for="policy_files">Upload Custom Policy Files (optional):</label><br>
+      <input type="file" name="policy_files" multiple><br><br>
+
+      <button type="submit">🚀 Run Pipeline</button>
+    </form>
+
+    {% if download_url %}
+      <p><a href="{{ download_url }}" target="_blank">📥 Download Result Document</a></p>
+    {% endif %}
+  </div>
+</body>
+</html>

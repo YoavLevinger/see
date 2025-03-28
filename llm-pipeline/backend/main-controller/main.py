@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from typing import List
 import requests
 import uuid
+import os
 
 app = FastAPI()
 
@@ -30,7 +31,18 @@ def handle_description(input: DescriptionInput):
     }
     requests.post("http://localhost:8003/handle", json=payload)
 
-    # Create document
+    # Create policy file (you can modify this policy)
+    policy_text = "Ensure user input is validated. Avoid hardcoding credentials. Use secure file handling."
+    policy_path = os.path.join("backend/generated-code", folder_id, "policy.txt")
+    os.makedirs(os.path.dirname(policy_path), exist_ok=True)
+    with open(policy_path, "w") as f:
+        f.write(policy_text)
+
+    # Create document (which will include advisor feedback)
     requests.post("http://localhost:8004/create", json=payload)
 
-    return {"status": "done", "folder": folder_id, "download": f"http://localhost:8004/download/{folder_id}"}
+    return {
+        "status": "done",
+        "folder": folder_id,
+        "download": f"http://localhost:8004/download/{folder_id}"
+    }

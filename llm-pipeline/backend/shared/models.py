@@ -20,3 +20,10 @@ class DocRequest(BaseModel):
     folder: str
     description: str
     subtasks: List[str]
+
+class AdvisorRequest(BaseModel):
+    folder: str
+    policy: str
+
+class AdvisorResponse(BaseModel):
+    recommendations: List[str]
