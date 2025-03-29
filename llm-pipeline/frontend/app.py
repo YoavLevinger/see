@@ -5,14 +5,28 @@ from fastapi.templating import Jinja2Templates
 import requests
 import os
 import uuid
+import logging
 
 app = FastAPI()
+
+os.makedirs("logs", exist_ok=True)
+log_file = os.path.join("logs", "frontend.log")
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler(log_file, mode='a')
+    ]
+)
+
 app.mount("/static", StaticFiles(directory="frontend/static"), name="static")
 templates = Jinja2Templates(directory="frontend/templates")
 
 @app.get("/", response_class=HTMLResponse)
 async def form_get(request: Request):
     folder_id = str(uuid.uuid4())
+    logging.info(f"New session started with folder ID: {folder_id}")
     return templates.TemplateResponse("index.html", {
         "request": request,
         "folder_id": folder_id
@@ -22,30 +36,38 @@ async def form_get(request: Request):
 async def handle_submission(
     request: Request,
     description: str = Form(...),
-    advisors: list[str] = Form(...),
     folder_id: str = Form(...),
-    policy_files: list[UploadFile] = File(default=[])
+    security_policy: UploadFile = File(None),
+    accessibility_policy: UploadFile = File(None),
+    performance_policy: UploadFile = File(None),
+    other_files: list[UploadFile] = File(default=[])
 ):
     folder_path = os.path.join("generated-code", folder_id)
     os.makedirs(folder_path, exist_ok=True)
+    logging.info(f"Handling submission for folder ID: {folder_id}")
 
-    # Upload each policy file
-    for file in policy_files:
+    policy_map = {
+        "security": security_policy,
+        "accessibility": accessibility_policy,
+        "performance": performance_policy,
+    }
+
+    for name, file in policy_map.items():
+        if file and file.filename.endswith(".pdf"):
+            policy_path = os.path.join(folder_path, f"policy.{name}.pdf")
+            with open(policy_path, "wb") as f:
+                f.write(await file.read())
+            logging.info(f"Uploaded {name} advisor policy to {policy_path}")
+
+    for file in other_files:
         if not file.filename.strip():
-            continue  # skip empty uploads
-
+            continue
         file_path = os.path.join(folder_path, file.filename)
         with open(file_path, "wb") as f:
             f.write(await file.read())
+        logging.info(f"Uploaded general file: {file.filename}")
 
-    # Save selected advisor roles as part of description if needed
-    advisor_policy_map = {
-        "security": "policy.security.txt",
-        "accessibility": "policy.accessibility.txt",
-        "performance": "policy.performance.txt",
-    }
-
-    # Send software description to pipeline
+    logging.info("Sending description to pipeline API...")
     response = requests.post(
         "http://localhost:8080/process",
         json={"description": description}
@@ -53,6 +75,7 @@ async def handle_submission(
 
     if response.status_code == 200:
         result = response.json()
+        logging.info(f"Pipeline executed successfully. Download link: {result.get('download')}")
         return templates.TemplateResponse("index.html", {
             "request": request,
             "message": "Pipeline executed successfully!",
@@ -60,6 +83,7 @@ async def handle_submission(
             "folder_id": folder_id
         })
     else:
+        logging.error("Pipeline execution failed.")
         return templates.TemplateResponse("index.html", {
             "request": request,
             "message": "Error submitting the task.",

@@ -1,5 +1,3 @@
----
-
 ## ✅ **Formulas to Use Based on Collected Metrics**
 
 ### 1. **COCOMO II Model**
@@ -47,7 +45,7 @@
 - **Required Data**:
   - Count of inputs/outputs/inquiries/files/interfaces (can be approximated or extracted via automated tools)
 
----
+
 
 ## 📦 Example (For a Hypothetical Repo)
 

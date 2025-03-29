@@ -2,8 +2,20 @@ import requests
 from fastapi import FastAPI
 from backend.shared.models import TaskRequest, SubTaskResponse
 import logging
+import os
+
 app = FastAPI()
-logging.basicConfig(level=logging.INFO)
+
+os.makedirs("logs", exist_ok=True)
+log_file = os.path.join("logs", "task-splitter.log")
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler(log_file, mode='a')
+    ]
+)
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL = "mistral"
