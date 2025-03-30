@@ -68,7 +68,7 @@ db.sqlite3-journal
 instance/
 .webassets-cache
 
-# Scrapy stuff:
+# Scrapy
 .scrapy
 
 # Sphinx documentation
@@ -130,7 +130,7 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
-# Environments
+# Virtual environments
 .env
 .venv
 env/
@@ -172,18 +172,24 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-/docs/git-ignored-folder/
+
+# Custom project-specific ignored files
 docs/git-ignored-folder/
-/docs/git-ignored-folder/lit-review-instructions.md
-/see-methods/02-enhanced-oss-see/0-artifacts/old/sdee_lite_description_vectorized-large.sql
-/see-methods/02-enhanced-oss-see/0-artifacts/sdee_lite_description_vectorized.sql
-/see-methods/02-enhanced-oss-see/07-test-sbert/sdee_lite_description_vectorized-large.sql
-see-methods/02-enhanced-oss-see/07-test-sbert/sdee_lite_description_vectorized.sql
-/llm-pipeline/generated-code/
+docs/git-ignored-folder/required-articles.md
+docs/git-ignored-folder/lit-review-instructions.md
+
+# Generated code
+llm-pipeline/generated-code/
 llm-pipeline/backend/generated-code/
-/see-methods/02-enhanced-oss-see/04-vectorizing-description-field/sdee_lite_description_vectorized.sql
-/see-methods/02-enhanced-oss-see/05-minimal-dataset/sdee_lite_description_vectorized.sql
-see-methods/02-enhanced-oss-see/05-minimal-dataset/sdee_lite_description_vectorized.sql
+
+# SEE artifacts
+see-methods/02-enhanced-oss-see/0-artifacts/sdee_lite_description_vectorized-large.sql
+see-methods/02-enhanced-oss-see/0-artifacts/sdee_lite_description_vectorized.sql
+see-methods/02-enhanced-oss-see/04-vectorizing-description-field/sdee_lite_description_vectorized.sql
 see-methods/02-enhanced-oss-see/04-vectorizing-description-field/sdee_lite_description_cleaned.sql
 see-methods/02-enhanced-oss-see/04-vectorizing-description-field/sdee_lite_description_cleaned_old.sql
+see-methods/02-enhanced-oss-see/05-minimal-dataset/sdee_lite_description_vectorized.sql
 see-methods/02-enhanced-oss-see/06-using-sbert-similarity-to-get-repositories/sdee_lite_description_vectorized.sql
+see-methods/02-enhanced-oss-see/07-test-sbert/sdee_lite_description_vectorized.sql
+see-methods/02-enhanced-oss-see/07-test-sbert/sdee_lite_description_vectorized-large.sql
+see-methods/02-enhanced-oss-see/0-artifacts/old/sdee_lite_description_vectorized-large.sql
