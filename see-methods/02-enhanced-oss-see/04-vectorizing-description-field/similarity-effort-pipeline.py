@@ -12,7 +12,6 @@ torch.manual_seed(42)
 VECTOR_TABLE = "sbert_description_vectorized"
 DB_SQL_PATH = "sdee_lite_description_vectorized.sql"
 ORIGINAL_SQL = "sdee_lite_description_cleaned.sql"
-# VECTOR_TABLE = "sbert_description_vectorized"
 # SQL_PATH = "sdee_lite_description_vectorized.sql"
 
 
@@ -63,8 +62,6 @@ def save_database_to_sql(conn, output_path):
         for line in conn.iterdump():
             f.write(f"{line}\n")
     print(f"💾 Updated database saved to '{output_path}'")
-
-
 
 
 def load_data(conn):
