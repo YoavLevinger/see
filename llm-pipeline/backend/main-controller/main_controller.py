@@ -97,12 +97,22 @@ def handle_description(input: DescriptionInput):
 
     # Step 6: Create documentation
     try:
+        # doc_payload = {
+        #     "folder": folder_id,
+        #     "description": description,
+        #     "effort_table": effort_table,
+        #     "subtasks": subtasks,
+        #     "dev_subtasks": dev_subtasks
+        # }
+
         doc_payload = {
-            "folder": folder_id,
+            "folder_id": folder_id,
             "description": description,
-            "effort_table": effort_table,
             "subtasks": subtasks,
-            "dev_subtasks": dev_subtasks
+            "dev_subtasks": dev_subtasks,
+            "policy_texts": {"default": policy_text},  # load policy
+            "effort_table": effort_table,
+            "expert_advice": {}  # or real advice if available
         }
         response = requests.post("http://localhost:8004/create", json=doc_payload)
         response.raise_for_status()

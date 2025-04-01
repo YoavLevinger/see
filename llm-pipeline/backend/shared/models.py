@@ -1,7 +1,7 @@
 # shared/models.py
 
 from pydantic import BaseModel
-from typing import List
+from typing import List, Dict, Optional, Any
 
 class TaskRequest(BaseModel):
     description: str
@@ -19,11 +19,29 @@ class ToolXRequest(BaseModel):
     description: str
     subtasks: List[str]
 
+# class DocRequest(BaseModel):
+#     folder: str
+#     description: str
+#     subtasks: List[str]
+#     dev_subtasks: List[str]
+
+# class DocRequest(BaseModel):
+#     folder_id: str
+#     description: str
+#     subtasks: List[str]
+#     dev_subtasks: List[str]
+#     policy_texts: Dict[str, str] = {}
+#     expert_advice: Dict[str, str] = {}
+#     effort_table: Optional[Dict[str, Any]] = {}
+
 class DocRequest(BaseModel):
-    folder: str
+    folder_id: str
     description: str
     subtasks: List[str]
     dev_subtasks: List[str]
+    policy_texts: Dict[str, str] = {}
+    effort_table: Optional[Dict[str, Any]] = {}
+    expert_advice: Dict[str, str] = {}
 
 class AdvisorRequest(BaseModel):
     folder: str
