@@ -7,7 +7,8 @@
 </head>
 <body>
   <div class="container">
-    <h1>🔧 Submit Your Software Task</h1>
+    <h1>📈 Software Effort Estimation</h1>
+    <h2>🔧 Submit Your Software Task</h2>
 
     {% if message %}
       <p class="message">{{ message }}</p>
@@ -34,5 +35,20 @@
       <p><a href="{{ download_url }}" target="_blank">📥 Download Result Document</a></p>
     {% endif %}
   </div>
+
+  <div id="loadingMessage" style="display: none; color: navy; font-weight: bold; text-align: center; margin-top: 20px;">
+    ⏳ Processing... Please do not close the tab until the result is ready.
+  </div>
+
+<script>
+  const form = document.querySelector("form");
+  const loadingMessage = document.getElementById("loadingMessage");
+
+  form.addEventListener("submit", function () {
+    loadingMessage.style.display = "block";
+  });
+</script>
+
+
 </body>
 </html>

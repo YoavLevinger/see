@@ -5,10 +5,11 @@ import requests
 import uuid
 import os
 import logging
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 app = FastAPI()
 
-# Set up logging
+# Setup logging
 os.makedirs("logs", exist_ok=True)
 log_file = os.path.join("logs", "main-controller.log")
 logging.basicConfig(
@@ -19,6 +20,7 @@ logging.basicConfig(
         logging.FileHandler(log_file, mode='a')
     ]
 )
+logger = logging.getLogger(__name__)
 
 class DescriptionInput(BaseModel):
     description: str
@@ -27,38 +29,72 @@ class DescriptionInput(BaseModel):
 def handle_description(input: DescriptionInput):
     description = input.description
     folder_id = str(uuid.uuid4())
-    logging.info(f"Received description for processing. Folder ID: {folder_id}")
+    logger.info(f"Processing new input: {folder_id}")
 
-    # Split tasks
-    response = requests.post("http://localhost:8001/split", json={"description": description})
-    subtasks = response.json().get("subtasks", [])
-    logging.info(f"Received {len(subtasks)} subtasks from task-splitter.")
+    # Step 1: Get subtasks
+    try:
+        response = requests.post("http://localhost:8001/split", json={"description": description})
+        response.raise_for_status()
+        subtasks_data = response.json()
+        subtasks = subtasks_data.get("subtasks", [])
+        dev_subtasks = subtasks_data.get("dev_subtasks", [])
+        logger.info(f"Subtasks: {len(subtasks)} | Dev subtasks: {len(dev_subtasks)}")
+    except Exception as e:
+        logger.error(f"Failed to split subtasks: {e}")
+        return {"status": "error", "message": "Failed to split subtasks"}
 
-    # Generate code for each
-    for subtask in subtasks:
-        requests.post("http://localhost:8002/generate", json={"subtask": subtask, "folder": folder_id})
-        logging.info(f"Code generation triggered for subtask: {subtask}")
+    # Step 2: Generate code for dev subtasks in parallel
+    def post_generate(subtask):
+        logger.info(f"Submitting code generation for: {subtask}")
+        try:
+            res = requests.post("http://localhost:8002/generate", json={"subtask": subtask, "folder": folder_id})
+            res.raise_for_status()
+            logger.info(f"✅ Code generated for: {subtask}")
+        except Exception as e:
+            logger.error(f"❌ Code generation failed for: {subtask} | Error: {e}")
 
-    # Notify tool X
-    payload = {
-        "folder": folder_id,
-        "description": description,
-        "subtasks": subtasks
-    }
-    requests.post("http://localhost:8003/handle", json=payload)
-    logging.info("Notified tool-x with task payload.")
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        futures = [executor.submit(post_generate, task) for task in dev_subtasks]
+        for future in as_completed(futures):
+            pass  # Results already logged inside function
 
-    # Create policy file
-    policy_text = "Ensure user input is validated. Avoid hardcoding credentials. Use secure file handling."
-    policy_path = os.path.join("generated-code", folder_id, "policy.txt")
-    os.makedirs(os.path.dirname(policy_path), exist_ok=True)
-    with open(policy_path, "w") as f:
-        f.write(policy_text)
-    logging.info(f"Policy file written to: {policy_path}")
+    # Step 3: Notify Tool X
+    try:
+        payload = {
+            "folder": folder_id,
+            "description": description,
+            "subtasks": subtasks
+        }
+        response = requests.post("http://localhost:8003/handle", json=payload)
+        response.raise_for_status()
+        logger.info("Tool X notified successfully.")
+    except Exception as e:
+        logger.warning(f"Tool X notification failed: {e}")
 
-    # Create document
-    requests.post("http://localhost:8004/create", json=payload)
-    logging.info("Document creation triggered.")
+    # Step 4: Create policy file
+    try:
+        policy_text = "Ensure user input is validated. Avoid hardcoding credentials. Use secure file handling."
+        policy_path = os.path.join("generated-code", folder_id, "policy.txt")
+        os.makedirs(os.path.dirname(policy_path), exist_ok=True)
+        with open(policy_path, "w") as f:
+            f.write(policy_text)
+        logger.info("Default policy file written.")
+    except Exception as e:
+        logger.warning(f"Failed to write policy file: {e}")
+
+    # Step 5: Create documentation
+    try:
+        doc_payload = {
+            "folder": folder_id,
+            "description": description,
+            "subtasks": subtasks,
+            "dev_subtasks": dev_subtasks
+        }
+        response = requests.post("http://localhost:8004/create", json=doc_payload)
+        response.raise_for_status()
+        logger.info("Document creator triggered.")
+    except Exception as e:
+        logger.error(f"Failed to trigger document creation: {e}")
 
     return {
         "status": "done",

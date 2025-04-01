@@ -15,6 +15,7 @@ body {
 
 h1 {
   text-align: center;
+  color: blue;
 }
 
 textarea {
@@ -33,6 +34,10 @@ button {
   border: none;
   font-size: 16px;
   cursor: pointer;
+}
+
+#loadingMessage {
+  font-size: 18px;
 }
 
 button:hover {

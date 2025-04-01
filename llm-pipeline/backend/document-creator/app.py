@@ -8,7 +8,7 @@ import logging
 
 app = FastAPI()
 
-# Set up logging to logs/
+# Logging setup
 os.makedirs("logs", exist_ok=True)
 log_file = os.path.join("logs", "document-creator.log")
 logging.basicConfig(
@@ -27,16 +27,20 @@ def create_document(req: DocRequest):
     md_path = os.path.join(folder_path, "summary.md")
     pdf_path = os.path.join(folder_path, "summary.pdf")
 
-    logging.info(f"Creating document for folder: {req.folder}")
+    logging.info(f"Creating document in {folder_path}")
 
     md_content = f"""# 📝 Software Project Report
 
 ## 📘 Description
 {req.description}
 
-## 🔨 Subtasks
+## 🧭 All Project Subtasks
 """
     for i, task in enumerate(req.subtasks, 1):
+        md_content += f"{i}. {task}\n"
+
+    md_content += "\n## 🔨 Development Code Subtasks\n"
+    for i, task in enumerate(req.dev_subtasks, 1):
         md_content += f"{i}. {task}\n"
 
     md_content += "\n## 📂 Code Files"
@@ -44,24 +48,24 @@ def create_document(req: DocRequest):
         for file in os.listdir(folder_path):
             if file.endswith(".py"):
                 md_content += f"\n\n### `{file}`\n"
-                with open(os.path.join(folder_path, file), "r") as code_file:
-                    md_content += "\n```python\n" + code_file.read() + "\n```"
+                try:
+                    with open(os.path.join(folder_path, file), "r") as code_file:
+                        md_content += "\n```python\n" + code_file.read() + "\n```"
+                except Exception as e:
+                    logging.warning(f"Could not read file {file}: {e}")
 
-    # Get expert advice
+    # Expert recommendations
     policy_path = os.path.join(folder_path, "policy.txt")
     recommendations = []
     if os.path.exists(policy_path):
-        with open(policy_path, "r") as p:
-            policy = p.read()
-        logging.info("Sending code for expert advisor analysis...")
-        resp = requests.post("http://localhost:8005/advise", json={"folder": req.folder, "policy": policy})
-        if resp.status_code == 200:
-            recommendations = resp.json().get("recommendations", [])
-            logging.info(f"Received {len(recommendations)} recommendations.")
-        else:
-            logging.warning("Advisor service returned non-200 status.")
-    else:
-        logging.info("No policy file found. Skipping expert recommendations.")
+        try:
+            with open(policy_path, "r") as p:
+                policy = p.read()
+            resp = requests.post("http://localhost:8005/advise", json={"folder": req.folder, "policy": policy})
+            if resp.status_code == 200:
+                recommendations = resp.json().get("recommendations", [])
+        except Exception as e:
+            logging.warning(f"Advisor failed: {e}")
 
     md_content += "\n\n## 🧠 Expert Recommendations\n"
     if recommendations:
@@ -70,15 +74,18 @@ def create_document(req: DocRequest):
     else:
         md_content += "No recommendations were generated."
 
-    # Write Markdown file
-    with open(md_path, "w") as f:
-        f.write(md_content)
-    logging.info(f"Markdown written to {md_path}")
+    try:
+        with open(md_path, "w") as f:
+            f.write(md_content)
+    except Exception as e:
+        logging.error(f"Failed to write Markdown file: {e}")
 
-    # Convert to PDF
-    html = markdown.markdown(md_content, extensions=['fenced_code'])
-    HTML(string=html).write_pdf(pdf_path)
-    logging.info(f"PDF written to {pdf_path}")
+    try:
+        html = markdown.markdown(md_content, extensions=['fenced_code'])
+        HTML(string=html).write_pdf(pdf_path)
+        logging.info(f"Generated PDF at {pdf_path}")
+    except Exception as e:
+        logging.error(f"PDF generation failed: {e}")
 
     return {"status": "document created", "pdf": pdf_path}
 
@@ -86,9 +93,7 @@ def create_document(req: DocRequest):
 def download_pdf(folder_id: str):
     pdf_path = os.path.join("generated-code", folder_id, "summary.pdf")
     if not os.path.exists(pdf_path):
-        logging.warning(f"PDF not found for folder: {folder_id}")
         return Response(status_code=404)
 
     with open(pdf_path, "rb") as f:
-        logging.info(f"Serving PDF for folder: {folder_id}")
         return Response(f.read(), media_type="application/pdf")
