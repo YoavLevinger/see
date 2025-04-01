@@ -6,7 +6,7 @@ from sentence_transformers import SentenceTransformer, util
 
 DB_SQL_PATH = "sdee_lite_description_vectorized.sql"
 VECTOR_TABLE = "sbert_description_vectorized"
-TOP_K = 10
+TOP_K = 5
 
 def load_vectorized_data(sql_path):
     """Load vectorized embeddings from an existing SQL dump."""

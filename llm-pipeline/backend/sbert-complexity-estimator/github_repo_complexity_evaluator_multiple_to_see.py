@@ -10,7 +10,7 @@ import tempfile
 import pandas as pd
 import lizard
 from pydriller import Repository
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 from tabulate import tabulate
 import sys
 from contextlib import redirect_stdout
@@ -190,7 +190,7 @@ def evaluate_repo_complexity(owner, repo_name, complexity_mode="power"):
 # Batch evaluation of multiple repositories
 # Outputs results to terminal, CSV, and image dashboard
 
-def evaluate_multiple_repos(repo_list, output_csv="batch_repo_complexity.csv", log_file="batch_output.log", complexity_mode="power"):
+def evaluate_multiple_repos(repo_list, temp_dir, log_file="batch_output.log", complexity_mode="power"):
     results = []
     class Tee:
         def __init__(self, *files): self.files = files
@@ -209,18 +209,29 @@ def evaluate_multiple_repos(repo_list, output_csv="batch_repo_complexity.csv", l
                     print(f"Error: {e}")
 
             df = pd.DataFrame(results)
+            output_csv = os.path.join(temp_dir, "effort_estimates.csv")
             df.to_csv(output_csv, index=False)
             print(f"\nSaved results to {output_csv}")
 
-            plt.figure(figsize=(10, 6))
-            df_sorted = df.sort_values(by="estimated_effort_hours", ascending=False)
-            plt.barh(df_sorted["repo"], df_sorted["estimated_effort_hours"])
-            plt.xlabel("Estimated Effort (hours)")
-            plt.title("Repository Effort Estimations")
-            plt.tight_layout()
-            plt.savefig("effort_dashboard.png")
-            print("Dashboard saved as effort_dashboard.png")
-            plt.close()
+            # plt.figure(figsize=(10, 6))
+            # df_sorted = df.sort_values(by="estimated_effort_hours", ascending=False)
+            # plt.barh(df_sorted["repo"], df_sorted["estimated_effort_hours"])
+            # plt.xlabel("Estimated Effort (hours)")
+            # plt.title("Repository Effort Estimations")
+            # plt.tight_layout()
+            # plt.savefig("effort_dashboard.png")
+            # print("Dashboard saved as effort_dashboard.png")
+            # plt.close()
+
+            return [
+                {
+                    "name": row["repo"],
+                    "hours": round(row["estimated_effort_hours"], 2),
+                    "owner": row["owner"]
+                }
+                for _, row in df.iterrows()
+            ]
+
 
 # Example usage:
 # repos = [("psf", "requests"), ("pallets", "flask")]
