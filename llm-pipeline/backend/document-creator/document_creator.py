@@ -7,7 +7,6 @@ from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from typing import List, Dict, Any, Optional
 from weasyprint import HTML
-
 from backend.shared.models import DocRequest
 
 logger = logging.getLogger("uvicorn")
@@ -39,12 +38,12 @@ async def create_document(req: DocRequest):
 
 ## ✅ Subtasks
 """
-    for subtask in req.subtasks:
-        md_content += f"- {subtask}\n"
+    for i, subtask in enumerate(req.subtasks, 1):
+        md_content += f"{i}. {subtask}\n"
 
     md_content += "\n## 💻 Developer Subtasks\n"
-    for subtask in req.dev_subtasks:
-        md_content += f"- {subtask}\n"
+    for i, subtask in enumerate(req.dev_subtasks, 1):
+        md_content += f"{i}. {subtask}\n"
 
     md_content += "\n## 📂 Code Files"
     for fname in os.listdir(folder_path):
@@ -63,14 +62,17 @@ async def create_document(req: DocRequest):
 
     md_content += "\n\n## ⏱️ Effort Estimation Based on Similar Repositories\n"
     if repos:
+        md_content += "\n\n⏱️ Effort Estimation Based on Similar Repositories\n\n"
         md_content += "| Repository | Estimated Hours |\n"
-        md_content += "|------------|-----------------|\n"
+        md_content += "|------------|----------------:|\n"
         for repo in repos:
-            md_content += f"| {repo.get('name', 'N/A')} | {repo.get('hours', 'N/A')} |\n"
+            name = str(repo.get("name", "N/A")).replace("|", "\\|")
+            hours = repo.get("hours", "N/A")
+            md_content += f"| {name} | {hours:.2f} |\n"
         if avg_time is not None:
-            md_content += f"| **Average** | **{avg_time}** |\n"
+            md_content += f"| **Average** | **{avg_time:.2f}** |\n"
     else:
-        md_content += "No estimation data available.\n"
+        md_content += "\n⏱️ Effort Estimation Based on Similar Repositories\n\nNo estimation data available.\n"
 
     # Expert advice (optional)
     if req.expert_advice:
@@ -96,7 +98,33 @@ async def create_document(req: DocRequest):
     # Write HTML
     html_path = os.path.join(folder_path, "summary.html")
     try:
-        html_content = markdown.markdown(md_content, extensions=['fenced_code'])
+        markdown_body = markdown.markdown(md_content, extensions=['fenced_code', 'tables'])
+
+        html_content = f"""
+        <html>
+        <head>
+          <style>
+            table {{
+              width: 100%;
+              border-collapse: collapse;
+              margin-top: 1em;
+            }}
+            th, td {{
+              border: 1px solid #aaa;
+              padding: 8px;
+              text-align: left;
+            }}
+            th {{
+              background-color: #f2f2f2;
+            }}
+          </style>
+        </head>
+        <body>
+        {markdown_body}
+        </body>
+        </html>
+        """
+
         with open(html_path, "w") as f:
             f.write(html_content)
     except Exception as e:

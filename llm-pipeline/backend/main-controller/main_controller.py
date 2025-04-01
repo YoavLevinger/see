@@ -88,8 +88,15 @@ def handle_description(input: DescriptionInput):
     try:
         resp = requests.post("http://localhost:8006/estimate", json={"description": description})
         if resp.ok:
-            effort_table = resp.json()
-            logger.info("✅ Received effort estimation from sbert-complexity-estimator.")
+            raw_effort = resp.json()
+            effort_table = {
+                "repositories": [
+                    {"name": e["name"], "hours": e["estimated_hours"]}
+                    for e in raw_effort.get("estimates", [])
+                ],
+                "average_time": raw_effort.get("average_hours")
+            }
+            logger.info("✅ Transformed effort estimation for document creator.")
         else:
             logger.warning("⚠️ Effort estimation request failed.")
     except Exception as e:
