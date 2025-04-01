@@ -36,9 +36,23 @@
     {% endif %}
   </div>
 
-  <div id="loadingMessage" style="display: none; color: navy; font-weight: bold; text-align: center; margin-top: 20px;">
-    ⏳ Processing... Please do not close the tab until the result is ready.
-  </div>
+<!--  <div id="loadingMessage" style="display: none; color: navy; font-weight: bold; text-align: center; margin-top: 20px;">-->
+<!--    ⏳ Processing... Please do not close the tab until the result is ready.-->
+<!--  </div>-->
+
+<!--<script>-->
+<!--  const form = document.querySelector("form");-->
+<!--  const loadingMessage = document.getElementById("loadingMessage");-->
+
+<!--  form.addEventListener("submit", function () {-->
+<!--    loadingMessage.style.display = "block";-->
+<!--  });-->
+<!--</script>-->
+
+<div id="loadingMessage" style="display: none; text-align: center; margin-top: 20px;">
+  <div class="spinner"></div>
+  <p style="color: navy; font-weight: bold;">Processing... This may take few minutes, please do not close this tab.</p>
+</div>
 
 <script>
   const form = document.querySelector("form");

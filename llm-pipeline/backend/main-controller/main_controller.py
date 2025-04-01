@@ -53,7 +53,7 @@ def handle_description(input: DescriptionInput):
         except Exception as e:
             logger.error(f"❌ Code generation failed for: {subtask} | Error: {e}")
 
-    with ThreadPoolExecutor(max_workers=5) as executor:
+    with ThreadPoolExecutor(max_workers=8) as executor:
         futures = [executor.submit(post_generate, task) for task in dev_subtasks]
         for future in as_completed(futures):
             pass  # Results already logged inside function
