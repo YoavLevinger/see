@@ -1,5 +1,16 @@
 #!/bin/bash
 
+
+# Kill any leftover processes from last run
+for port in 8001 8002 8003 8004 8005 8006 8007 8080 8090; do
+  pid=$(lsof -t -i :$port)
+  if [ -n "$pid" ]; then
+    echo "🔴 Killing process on port $port (PID: $pid)"
+    kill -9 $pid
+  fi
+done
+
+
 # Navigate to the project root
 cd "$(dirname "$0")"
 
@@ -22,7 +33,8 @@ echo "Starting expert-advisor on port 8005..."
 uvicorn backend.expert-advisor.expert_advisor:app --port 8005 &
 
 echo "Starting sbert-complexity-estimator on port 8006..."
-uvicorn backend.sbert-complexity-estimator.sbert_complexity_estimator:app --port 8006 &
+#uvicorn backend.sbert-complexity-estimator.sbert_complexity_estimator:app --port 8006 &
+uvicorn backend.sbert_complexity_estimator.effort_estimator_combined:app --port 8007 &
 
 echo "Starting main-controller on port 8080..."
 uvicorn backend.main-controller.main_controller:app --port 8080 &

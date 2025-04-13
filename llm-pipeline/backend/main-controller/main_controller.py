@@ -83,43 +83,65 @@ def handle_description(input: DescriptionInput):
         logger.warning(f"Failed to write policy file: {e}")
 
     # Step 5: Effort estimation from past projects
-    # After all code files are generated
-    effort_table = {}
+
+    # Step 5B: Hybrid SBERT + Local Code Effort Estimation
+    combined_effort = {}
     try:
-        resp = requests.post("http://localhost:8006/estimate", json={"description": description})
-        if resp.ok:
-            raw_effort = resp.json()
-            effort_table = {
-                "repositories": [
-                    {"name": e["name"], "hours": e["estimated_hours"]}
-                    for e in raw_effort.get("estimates", [])
-                ],
-                "average_time": raw_effort.get("average_hours")
+        local_folder = os.path.join("generated-code", folder_id)
+        combined_resp = requests.post(
+            "http://localhost:8007/estimate-all",
+            json={
+                "description": description,
+                "local_folder_path": local_folder
             }
-            logger.info("✅ Transformed effort estimation for document creator.")
+        )
+        if combined_resp.ok:
+            combined_effort = combined_resp.json()
+            logger.info("✅ Combined effort estimation retrieved.")
         else:
-            logger.warning("⚠️ Effort estimation request failed.")
+            logger.warning("⚠️ Combined effort estimation service returned error.")
     except Exception as e:
-        logger.exception("❌ Failed to call sbert-complexity-estimator: %s", str(e))
+        logger.exception("❌ Failed to call combined effort estimator: %s", str(e))
+
+    # After all code files are generated
+    # effort_table = {}
+    # try:
+    #     resp = requests.post("http://localhost:8006/estimate", json={"description": description})
+    #     if resp.ok:
+    #         raw_effort = resp.json()
+    #         effort_table = {
+    #             "repositories": [
+    #                 {"name": e["name"], "hours": e["estimated_hours"]}
+    #                 for e in raw_effort.get("estimates", [])
+    #             ],
+    #             "average_time": raw_effort.get("average_hours")
+    #         }
+    #         logger.info("✅ Transformed effort estimation for document creator.")
+    #     else:
+    #         logger.warning("⚠️ Effort estimation request failed.")
+    # except Exception as e:
+    #     logger.exception("❌ Failed to call sbert-complexity-estimator: %s", str(e))
 
     # Step 6: Create documentation
     try:
         # doc_payload = {
-        #     "folder": folder_id,
+        #     "folder_id": folder_id,
         #     "description": description,
-        #     "effort_table": effort_table,
         #     "subtasks": subtasks,
-        #     "dev_subtasks": dev_subtasks
+        #     "dev_subtasks": dev_subtasks,
+        #     "policy_texts": {"default": policy_text},  # load policy
+        #     "effort_table": effort_table,
+        #     "expert_advice": {}  # or real advice if available
         # }
-
         doc_payload = {
             "folder_id": folder_id,
             "description": description,
             "subtasks": subtasks,
             "dev_subtasks": dev_subtasks,
-            "policy_texts": {"default": policy_text},  # load policy
-            "effort_table": effort_table,
-            "expert_advice": {}  # or real advice if available
+            "policy_texts": {"default": policy_text},
+            # "effort_table": effort_table,
+            "expert_advice": {},
+            "combined_effort": combined_effort  # ✅ NEW ENTRY
         }
         response = requests.post("http://localhost:8004/create", json=doc_payload)
         response.raise_for_status()

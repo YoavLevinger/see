@@ -57,6 +57,8 @@ async def create_document(req: DocRequest):
 
     # Add effort estimation
     effort = req.effort_table or {}
+    combined_effort = req.combined_effort or {}
+
     repos = effort.get("repositories", [])
     avg_time = effort.get("average_time")
 
@@ -74,12 +76,43 @@ async def create_document(req: DocRequest):
     else:
         md_content += "\n⏱️ Effort Estimation Based on Similar Repositories\n\nNo estimation data available.\n"
 
+    md_content += "\n\n## 🧠 Combined Effort Estimation (SBERT + Code Analysis)\n"
+
+    # GitHub Similar Repositories Analysis
+    github_repos = combined_effort.get("github_repositories", [])
+    if github_repos:
+        md_content += "\n### 🔍 Top Similar GitHub Repositories (Filtered)\n"
+        md_content += "\n| Repository | Estimated Effort (hours) | Description |\n"
+        md_content += "|------------|--------------------------|-------------|\n"
+        for repo in github_repos:
+            name = str(repo.get("name", "N/A")).replace("|", "\\|")
+            hours = repo.get("hours", "N/A")
+            desc = repo.get("description", "N/A").replace("\n", " ").replace("|", "\\|")
+            md_content += f"| {name} | {hours:.2f} | {desc} |\n"
+
+        avg = combined_effort.get("github_average", None)
+        if avg is not None:
+            md_content += f"\n\n**Average Effort (without outliers):** {avg:.2f} hours\n"
+    else:
+        md_content += "\nNo GitHub repository effort data available.\n"
+
+    # Local Code Effort Estimation
+    local_effort = combined_effort.get("local_effort", {})
+    if local_effort:
+        md_content += "\n\n### 💻 Estimated Effort for Your Generated Code\n"
+        for k, v in local_effort.items():
+            md_content += f"- **{k}**: {v}\n"
+    else:
+        md_content += "\nNo local code estimation data available.\n"
+
     # Expert advice (optional)
     if req.expert_advice:
         md_content += "\n\n## 🧠 Expert Recommendations\n"
         for advisor, advice in req.expert_advice.items():
             md_content += f"\n### {advisor}\n"
             md_content += f"{advice}\n"
+
+
 
     # Policy analysis
     md_content += "\n\n## 📜 Policy Analysis\n"

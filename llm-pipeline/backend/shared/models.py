@@ -42,6 +42,8 @@ class DocRequest(BaseModel):
     policy_texts: Dict[str, str] = {}
     effort_table: Optional[Dict[str, Any]] = {}
     expert_advice: Dict[str, str] = {}
+    combined_effort: Optional[Dict[str, Any]] = {}
+
 
 class AdvisorRequest(BaseModel):
     folder: str
