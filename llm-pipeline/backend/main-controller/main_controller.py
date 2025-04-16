@@ -53,7 +53,7 @@ def handle_description(input: DescriptionInput):
         except Exception as e:
             logger.error(f"❌ Code generation failed for: {subtask} | Error: {e}")
 
-    with ThreadPoolExecutor(max_workers=8) as executor:
+    with ThreadPoolExecutor(max_workers=16) as executor:
         futures = [executor.submit(post_generate, task) for task in dev_subtasks]
         for future in as_completed(futures):
             pass  # Results already logged inside function
@@ -82,9 +82,7 @@ def handle_description(input: DescriptionInput):
     except Exception as e:
         logger.warning(f"Failed to write policy file: {e}")
 
-    # Step 5: Effort estimation from past projects
-
-    # Step 5B: Hybrid SBERT + Local Code Effort Estimation
+    # Step 5: Hybrid SBERT + Local Code Effort Estimation
     combined_effort = {}
     try:
         local_folder = os.path.join("generated-code", folder_id)
@@ -103,36 +101,10 @@ def handle_description(input: DescriptionInput):
     except Exception as e:
         logger.exception("❌ Failed to call combined effort estimator: %s", str(e))
 
-    # After all code files are generated
-    # effort_table = {}
-    # try:
-    #     resp = requests.post("http://localhost:8006/estimate", json={"description": description})
-    #     if resp.ok:
-    #         raw_effort = resp.json()
-    #         effort_table = {
-    #             "repositories": [
-    #                 {"name": e["name"], "hours": e["estimated_hours"]}
-    #                 for e in raw_effort.get("estimates", [])
-    #             ],
-    #             "average_time": raw_effort.get("average_hours")
-    #         }
-    #         logger.info("✅ Transformed effort estimation for document creator.")
-    #     else:
-    #         logger.warning("⚠️ Effort estimation request failed.")
-    # except Exception as e:
-    #     logger.exception("❌ Failed to call sbert-complexity-estimator: %s", str(e))
 
     # Step 6: Create documentation
     try:
-        # doc_payload = {
-        #     "folder_id": folder_id,
-        #     "description": description,
-        #     "subtasks": subtasks,
-        #     "dev_subtasks": dev_subtasks,
-        #     "policy_texts": {"default": policy_text},  # load policy
-        #     "effort_table": effort_table,
-        #     "expert_advice": {}  # or real advice if available
-        # }
+
         doc_payload = {
             "folder_id": folder_id,
             "description": description,

@@ -23,11 +23,13 @@ OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL = "mistral"
 
 def generate_code_from_llm(subtask: str) -> str:
+
     prompt = (
         f"You are a senior Python developer. Write Python code to implement this subtask:\n"
         f"{subtask}\n"
         f"Respond with only valid Python code, no explanations."
     )
+
     logging.info(f"Generating code for subtask [: {subtask}]")
 
     response = requests.post(OLLAMA_URL, json={"model": MODEL, "prompt": prompt, "stream": False})

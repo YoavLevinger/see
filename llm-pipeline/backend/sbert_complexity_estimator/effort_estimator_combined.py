@@ -45,44 +45,6 @@ def remove_outliers(results: List[Dict], key: str = "hours") -> List[Dict]:
 
 # === Route: Combined Estimation ===
 
-# @app.post("/estimate-all", response_model=CombinedEstimationResponse)
-# async def estimate_all_effort(req: CombinedEstimationRequest):
-#     logging.info("📥 Received combined estimation request.")
-#
-#     with tempfile.TemporaryDirectory(dir="./temp") as temp_dir:
-#         try:
-#             # Step 1: Get top-k similar repositories
-#             similar_df = get_top_k_similar_repos(req.description, top_k=5)
-#             if similar_df.empty:
-#                 raise HTTPException(status_code=404, detail="No similar repositories found.")
-#
-#             repo_tuples = [(row["owner"], row["repo"]) for _, row in similar_df.iterrows()]
-#             desc_lookup = {(row["owner"], row["repo"]): row["description"] for _, row in similar_df.iterrows()}
-#
-#             # Step 2: Evaluate effort for each repo
-#             all_results = evaluate_multiple_repos(repo_tuples, temp_dir)
-#
-#             for r in all_results:
-#                 r["description"] = desc_lookup.get((r["owner"], r["name"]), "")
-#
-#             # Step 3: Remove outliers and calculate average
-#             filtered_results = remove_outliers(all_results)
-#             github_avg = round(np.mean([r["hours"] for r in filtered_results]), 2)
-#
-#             # Step 4: Evaluate local folder
-#             local_result = evaluate_codebase(req.local_folder_path, complexity_mode="power", is_local=True)
-#
-#             return {
-#                 "github_repositories": filtered_results,
-#                 "github_average": github_avg,
-#                 "local_effort": local_result
-#             }
-#
-#         except Exception as e:
-#             logging.exception("Estimation failed: %s", str(e))
-#             raise HTTPException(status_code=500, detail=str(e))
-
-
 @app.post("/estimate-all", response_model=CombinedEstimationResponse)
 async def estimate_all_effort(req: CombinedEstimationRequest):
     logging.info("📥 Received combined estimation request.")

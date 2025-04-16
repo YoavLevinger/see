@@ -34,7 +34,7 @@ def get_top_k_similar_repos(description, top_k=TOP_K):
     df["similarity"] = df["embedding"].apply(lambda emb: float(util.cos_sim(new_vec, emb)))
     return df.sort_values(by="similarity", ascending=False).head(top_k)
 
-# Example usage
+# Example usage - marked-out for tests
 # if __name__ == "__main__":
 #     description_text = "A lightweight tool for deploying RESTful APIs in Python using Flask and SQLAlchemy."
 #     df_vectorized = load_vectorized_data(DB_SQL_PATH)

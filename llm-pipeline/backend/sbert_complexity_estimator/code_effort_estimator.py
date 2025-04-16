@@ -5,7 +5,70 @@ import subprocess
 import json
 import ast
 import re
-from typing import List, Dict
+import xml.etree.ElementTree as ET
+import subprocess
+import tempfile
+from typing import Dict, Any, List
+import lizard
+
+#verbosity/density of different languages (e.g., Java code tends to be more verbose than Python,
+# so Java gets a slightly reduced multiplier)
+
+LANGUAGE_WEIGHTS = {
+    'python': 1.0,
+    'java': 0.9,
+    'javascript': 0.95,
+    'csharp': 0.9,
+    'cpp': 1.1,
+    'c': 1.1,
+    'go': 0.95,
+    'typescript': 0.95,
+    'ruby': 0.95,
+    'php': 0.9,
+    'kotlin': 0.9,
+    'scala': 0.9,
+    'swift': 0.9,
+    'objective-c': 1.1,
+    'r': 0.95,
+    'lua': 0.9,
+    'groovy': 0.9,
+    'dart': 0.9,
+    'rust': 1.0,
+    'unknown': 1.0,
+}
+
+EXTENSION_MAP = {
+    '.py': 'python',
+    '.js': 'javascript',
+    '.ts': 'typescript',
+    '.java': 'java',
+    '.cs': 'csharp',
+    '.cpp': 'cpp',
+    '.cxx': 'cpp',
+    '.cc': 'cpp',
+    '.c': 'c',
+    '.go': 'go',
+    '.rb': 'ruby',
+    '.php': 'php',
+    '.rs': 'rust',
+    '.kt': 'kotlin',
+    '.kts': 'kotlin',
+    '.swift': 'swift',
+    '.m': 'objective-c',
+    '.mm': 'objective-c',
+    '.scala': 'scala',
+    '.lua': 'lua',
+    '.groovy': 'groovy',
+    '.dart': 'dart',
+    '.r': 'r'
+}
+
+def detect_language_by_extension(filename):
+    ext = os.path.splitext(filename)[1].lower()
+    return EXTENSION_MAP.get(ext, 'unknown')
+
+
+
 
 # --- Language-specific heuristics for error-tolerant complexity estimation ---
 def heuristic_js_ts(code: str) -> dict:
@@ -58,11 +121,55 @@ class CodeMetrics:
         self.function_count = 0
         self.ast_depths = []
 
+
+
     def analyze(self):
-        print(f"🌍 Analyzing codebase at: {self.path}")
-        for root, _, files in os.walk(self.path):
+        CODE_FILE_EXTENSIONS = {'.py', '.js', '.ts', '.java', '.cpp', '.c', '.cs', '.go', '.rb'}
+        NOT_CODE_FILE_EXTENSIONS = {
+            # Documentation & text
+            '.md', '.rst', '.txt', '.doc', '.docx', '.pdf',
+
+            # Config & metadata
+            '.json', '.yaml', '.yml', '.ini', '.cfg', '.toml', '.lock', '.xml', '.html', '.css',
+
+            # Binary / Media / Fonts
+            '.png', '.jpg', '.jpeg', '.gif', '.bmp', '.svg', '.ico',
+            '.mp4', '.mp3', '.wav', '.ogg', '.mov',
+            '.woff', '.woff2', '.ttf', '.eot',
+
+            # Archives & packages
+            '.zip', '.tar', '.gz', '.rar', '.7z', '.bz2', '.xz',
+
+            # Logs & database
+            '.log', '.sql', '.sqlite', '.db',
+
+            # Compiled & bytecode
+            '.pyc', '.pyo', '.class', '.exe', '.dll', '.so', '.o', '.a', '.dylib',
+
+            # Virtual environments / installers
+            '.whl', '.egg', '.deb', '.rpm', '.msi',
+
+            # Miscellaneous
+            '.csv', '.tsv', '.xlsx', '.xls', '.ppt', '.pptx', '.sample','.sln',
+
+            #additinal:
+            '.csproj', '.aidl', '.json', '.min.js','.gitignore','.out', '.properties','.pem','LICENSE', 'README', '.gradle',
+            '.project','.gitattributes','.classpath','.babelrc','.opts','gradlew','.bat','.props','.targets','.cache',
+        }
+        IGNORED_FOLDERS = {'.git', 'docs', 'Resources', 'static', '__pycache__'}
+        print(f"Analyzing codebase at: {self.path}")
+        for root, dirs, files in os.walk(self.path):
+
+            # Skip .git and other hidden/system folders
+            dirs[:] = [d for d in dirs if not d.startswith('.') and d != '__pycache__']
+            dirs[:] = [d for d in dirs if d not in IGNORED_FOLDERS] #TODO
             for file in files:
+                if any(file.endswith(ext) for ext in NOT_CODE_FILE_EXTENSIONS):
+                    continue  # Skip non-code files
+                # Skip files inside .git or any hidden/system directory
                 file_path = os.path.join(root, file)
+                # if '/.git/' in file_path or file_path.endswith('.git'):
+                #     continue
                 lang = self._detect_language(file)
                 print(f"🔍 [{lang}] Analyzing: {file_path}")
 
@@ -105,19 +212,24 @@ class CodeMetrics:
 
     def _analyze_lizard(self, filepath, lang):
         try:
-            result = subprocess.run(
-                ["lizard", "-l", lang, "-C", "10", "-j", filepath],
-                stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True, text=True
-            )
-            data = json.loads(result.stdout)
-            for file in data.get("files", []):
-                self.loc += file.get("nloc", 0)
-                for func in file.get("functions", []):
-                    self.cc.append(func.get("cyclomatic_complexity", 1))
-                    self.function_count += 1
+            analysis = lizard.analyze_file(filepath)
+            if not analysis.function_list:
+                print(f"⚠️ No functions parsed by Lizard in: {filepath}")
+                return
+
+            for function in analysis.function_list:
+                self.loc += function.length
+                self.cc.append(function.cyclomatic_complexity)
+                self.halstead_volume.append(function.token_count)  # approximation
+                self.cognitive_complexity.append(function.cognitive_complexity if hasattr(function,
+                                                                                          "cognitive_complexity") else function.cyclomatic_complexity)
+                self.function_count += 1
+
         except Exception as e:
-            print(f"⚠️ Lizard failed on {filepath}: {e}")
+            print(f"⚠️ Native Lizard failed on {filepath}: {e}")
             self._fallback_heuristic(filepath, lang)
+
+
 
     def _analyze_heuristic(self, filepath, lang):
         self._fallback_heuristic(filepath, lang)
@@ -168,39 +280,143 @@ class EffortEstimator:
         self.metrics = metrics
 
     def calculate_composite_complexity(self) -> float:
-        w1, w2, w3, w4, w5, w6 = 1, 2, 1, 1.5, 1, 1
-        LOC_component = w1 * (self.metrics.loc / 1000)
-        CC_component = w2 * statistics.mean(self.metrics.cc) if self.metrics.cc else 0
-        HV_component = w3 * statistics.mean(self.metrics.halstead_volume) if self.metrics.halstead_volume else 0
-        CoCo_component = w4 * statistics.mean(self.metrics.cognitive_complexity) if self.metrics.cognitive_complexity else 0
-        NF_component = w5 * math.log(self.metrics.function_count + 1)
-        ASTd_component = w6 * statistics.mean(self.metrics.ast_depths) if self.metrics.ast_depths else 0
+        loc_score = self.normalize_loc(self.metrics.loc)
+        cc_score = self.normalize_cyclomatic(statistics.mean(self.metrics.cc)) if self.metrics.cc else 0
+        halstead_score = self.normalize_halstead(
+            statistics.mean(self.metrics.halstead_volume)) if self.metrics.halstead_volume else 0
+        cognitive_score = self.normalize_cognitive(
+            statistics.mean(self.metrics.cognitive_complexity)) if self.metrics.cognitive_complexity else 0
+        func_score = self.normalize_functions(self.metrics.function_count)
+        ast_depth_score = self.normalize_ast_depth(statistics.mean(self.metrics.ast_depths)) if self.metrics.ast_depths else 0
 
-        C_comp = round(LOC_component + CC_component + HV_component + CoCo_component + NF_component + ASTd_component, 3)
-        print(f"🧮 Composite Complexity (C_comp): {C_comp}")
-        return C_comp
+        weights = { #w1, w2, w3, w4, w5, w6
+            # w1, w2, w3, w4, w5, w6 = 1.2, 1.6, 1.2, 1.2, 1.0, 1.0
+            "LOC": 6.5,
+            "Functions": 2.0,
+            "Avg Cyclomatic Complexity": 1.2,
+            "Avg Halstead Volume": 1.2,
+            "Avg Cognitive Complexity": 1.0,
+            "Avg AST Depth": 1.0
+        }
+
+        composite_score = ( #C_comp
+                loc_score * weights["LOC"] +
+                func_score * weights["Functions"] +
+                cc_score * weights["Avg Cyclomatic Complexity"] +
+                halstead_score * weights["Avg Halstead Volume"] +
+                cognitive_score * weights["Avg Cognitive Complexity"] +
+                ast_depth_score * weights["Avg AST Depth"]
+        )
+
+
+        # Detect language from first file (or default to 'python')
+        lang = 'python'
+        for root, dirs, files in os.walk(self.metrics.path):
+            for f in files:
+                lang = detect_language_by_extension(f)
+                if lang:
+                    break
+            break
+
+        lang_multiplier = LANGUAGE_WEIGHTS.get(lang.lower(), 1.0)
+
+        # We had gone through ~200 code repositories evaluation and concluded this for now
+        empirical_evaluator_factor = 2.9
+
+
+        return round(composite_score * empirical_evaluator_factor * lang_multiplier, 3)
+
+
+
+    def normalize_loc(self, loc: float) -> float:
+        if loc < 2000:
+            return loc / 4000  # was /2000
+        elif loc < 5000:
+            return 0.5 + (loc - 2000) / 9000  # was 6000
+        elif loc < 15000:
+            return 0.8 + (loc - 5000) / 25000  # was 35000
+        return 1.0
+
+    def normalize_functions(self, count: float) -> float:
+        if count < 20:
+            return count / 40
+        elif count < 100:
+            return 0.5 + (count - 20) / 160
+        elif count < 300:
+            return 0.8 + (count - 100) / 1000
+        return 1.0
+
+    def normalize_halstead(self, volume: float) -> float:
+        if volume < 200:
+            return volume / 400
+        elif volume < 1000:
+            return 0.5 + (volume - 200) / 1600
+        elif volume < 3000:
+            return 0.8 + (volume - 1000) / 8000
+        return 1.0
+
+    def normalize_cognitive(self, cognitive: float) -> float:
+        if cognitive < 5:
+            return cognitive / 10
+        elif cognitive < 15:
+            return 0.5 + (cognitive - 5) / 20
+        elif cognitive < 50:
+            return 0.8 + (cognitive - 15) / 140
+        return 1.0
+
+    # def normalize_ast_depth(self, depth: float) -> float:
+    #     return min(depth / 15, 1.0)
+
+    def normalize_ast_depth(self, depth: float) -> float:
+        if depth < 8:
+            return depth / 16
+        elif depth < 20:
+            return 0.5 + (depth - 8) / 24
+        return 1.0
+
+    # def normalize_cyclomatic(self, cc: float) -> float:
+    #     return min(cc / 10, 1.0)
+
+    def normalize_cyclomatic(self, cc: float) -> float:
+        if cc < 5:
+            return cc / 10
+        elif cc < 15:
+            return 0.5 + (cc - 5) / 20
+        return 1.0
+
+
 
     def calculate_effort(self, C_comp: float) -> Dict[str, float]:
-        a, b, c = 0.75, 1.0, 1.25
-        O = a * C_comp ** 0.85
+        # Academic PERT estimation
+        a, b, c = 0.85, 1.0, 2.0
+        O = a * C_comp ** 0.95
         M = b * C_comp
-        P = c * C_comp ** 1.15
-        effort = (O + 4 * M + P) / 6
+        P = c * C_comp ** 1.1
+        effort_days = (O + 4 * M + P) / 6
 
-        print("📈 PERT-Based Effort Estimation:")
-        print(f"  Optimistic: {O:.2f} | Most Likely: {M:.2f} | Pessimistic: {P:.2f} | Effort (days): {effort:.2f}")
+        # LOC adjustment — adds more time if the repo is large
+        loc = self.metrics.loc
+        # loc_adjustment = min(loc / 40.0, 200.0) * 0.02  # 40 LOC/day baseline
+        loc_adjustment = (loc ** 0.5) * 0.03  # nonlinear, increases more naturally
+        adjusted_effort_days = effort_days + loc_adjustment
+
+        # Convert to hours (with moderate overhead)
+        effort_hours = round(adjusted_effort_days * 8 * 1.1, 2)
+
+        print("PERT-Based Effort Estimation:")
+        print(f"  Optimistic: {O:.2f} | Most Likely: {M:.2f} | Pessimistic: {P:.2f} | Effort (days): {adjusted_effort_days:.2f}")
 
         return {
             "C_comp": round(C_comp, 3),
             "Optimistic": round(O, 2),
             "Most Likely": round(M, 2),
             "Pessimistic": round(P, 2),
-            "Effort (days)": round(effort, 2)
+            "Effort (days)": round(adjusted_effort_days, 2),
+            "hours": effort_hours
         }
 
-
 def run_estimation_on_folder(folder_path: str):
-    print(f"📂 Running academic estimation on: {folder_path}")
+    print(f"Running estimation on: {folder_path}")
     metrics = CodeMetrics(folder_path)
     metrics.analyze()
     estimator = EffortEstimator(metrics)
@@ -212,3 +428,8 @@ def run_estimation_on_folder(folder_path: str):
         print(f"{k}: {v}")
 
     return result
+
+
+if __name__ == "__main__":
+    folder_to_analyze = "/home/yoav-levinger/Documents/private/2nd degree/Final Project/solution V2/llm-pipeline"
+    run_estimation_on_folder(folder_to_analyze)

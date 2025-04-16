@@ -21,7 +21,7 @@ echo "Starting task-splitter on port 8001..."
 uvicorn backend.task-splitter.task_splitter:app --port 8001 &
 
 echo "Starting code-generator on port 8002..."
-uvicorn backend.code-generator.code_generator:app --port 8002 --workers 8 &
+uvicorn backend.code-generator.code_generator:app --port 8002 --workers 16 &
 
 echo "Starting tool-x-connector on port 8003..."
 uvicorn backend.tool-x-connector.tool_x_connector:app --port 8003 &

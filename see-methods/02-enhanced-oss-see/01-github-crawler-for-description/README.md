@@ -2,7 +2,7 @@ Absolutely! Here's how the `effort_score` and `effort_months` are calculated in 
 
 ---
 
-### 🧠 **Conceptual Basis (from your academic paper)**
+### 🧠 **Conceptual Basis**
 
 The effort estimation is based on a **developer activity model** from the paper:
 

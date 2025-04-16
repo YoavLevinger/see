@@ -1,6 +1,6 @@
 
 # github_repo_complexity_evaluator_multiple_to_see.py
-# Author: Yoav Levinger (refactored)
+# Author: Yoav Levinger
 # Purpose: Evaluate complexity and effort estimation of local and GitHub-hosted codebases
 # using the academic PERT-based model built on LOC, CC, Halstead Volume, and AST Depth.
 
@@ -13,7 +13,9 @@ import sys
 from contextlib import redirect_stdout
 from tabulate import tabulate
 
+#replace lines if running tests from the same folder
 from backend.sbert_complexity_estimator.code_effort_estimator import CodeMetrics, EffortEstimator
+# from code_effort_estimator import CodeMetrics, EffortEstimator
 
 
 # Clone a GitHub repository and return its path
@@ -37,6 +39,9 @@ def evaluate_repo_complexity(owner, repo_name, complexity_mode="academic"):
         estimator = EffortEstimator(metrics)
         c_comp = estimator.calculate_composite_complexity()
         effort_result = estimator.calculate_effort(c_comp)
+
+        print(f"C_comp = {c_comp}")
+        print(effort_result)
 
         result = {
             "owner": owner,
@@ -67,6 +72,9 @@ def evaluate_codebase(local_path, complexity_mode="academic", is_local=True):
     estimator = EffortEstimator(metrics)
     c_comp = estimator.calculate_composite_complexity()
     effort_result = estimator.calculate_effort(c_comp)
+
+    print(f"C_comp = {c_comp}")
+    print(effort_result)
 
     result = {
         "owner": "local",

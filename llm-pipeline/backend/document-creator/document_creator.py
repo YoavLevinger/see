@@ -62,19 +62,19 @@ async def create_document(req: DocRequest):
     repos = effort.get("repositories", [])
     avg_time = effort.get("average_time")
 
-    md_content += "\n\n## ⏱️ Effort Estimation Based on Similar Repositories\n"
-    if repos:
-        md_content += "\n\n⏱️ Effort Estimation Based on Similar Repositories\n\n"
-        md_content += "| Repository | Estimated Hours |\n"
-        md_content += "|------------|----------------:|\n"
-        for repo in repos:
-            name = str(repo.get("name", "N/A")).replace("|", "\\|")
-            hours = repo.get("hours", "N/A")
-            md_content += f"| {name} | {hours:.2f} |\n"
-        if avg_time is not None:
-            md_content += f"| **Average** | **{avg_time:.2f}** |\n"
-    else:
-        md_content += "\n⏱️ Effort Estimation Based on Similar Repositories\n\nNo estimation data available.\n"
+    # md_content += "\n\n## ⏱️ Effort Estimation Based on Similar Repositories\n"
+    # if repos:
+    #     md_content += "\n\n⏱️ Effort Estimation Based on Similar Repositories\n\n"
+    #     md_content += "| Repository | Estimated Hours |\n"
+    #     md_content += "|------------|----------------:|\n"
+    #     for repo in repos:
+    #         name = str(repo.get("name", "N/A")).replace("|", "\\|")
+    #         hours = repo.get("hours", "N/A")
+    #         md_content += f"| {name} | {hours:.2f} |\n"
+    #     if avg_time is not None:
+    #         md_content += f"| **Average** | **{avg_time:.2f}** |\n"
+    # else:
+    #     md_content += "\n⏱️ Effort Estimation Based on Similar Repositories\n\nNo estimation data available.\n"
 
     md_content += "\n\n## 🧠 Combined Effort Estimation (SBERT + Code Analysis)\n"
 
@@ -85,7 +85,8 @@ async def create_document(req: DocRequest):
         md_content += "\n| Repository | Estimated Effort (hours) | Description |\n"
         md_content += "|------------|--------------------------|-------------|\n"
         for repo in github_repos:
-            name = str(repo.get("name", "N/A")).replace("|", "\\|")
+            # name = str(repo.get("name", "N/A")).replace("|", "\\|")
+            name = str(repo.get("owner", "N/A")).replace("|", "\\|") + "/" + str(repo.get("name", "N/A")).replace("|", "\\|")
             hours = repo.get("hours", "N/A")
             desc = repo.get("description", "N/A").replace("\n", " ").replace("|", "\\|")
             md_content += f"| {name} | {hours:.2f} | {desc} |\n"

@@ -39,12 +39,15 @@ def split_description(task: TaskRequest):
     logging.info("Received description for task splitting.")
 
     # Prompt 1: General subtasks (e.g. planning, design, dev, testing)
+
     general_prompt = (
         f"You are a software architect. Break the following software description into 30 subtasks, "
         f"including planning, development, testing, and documentation.\n\n"
         f"Description:\n{task.description}\n\n"
         f"Return the subtasks as a numbered list."
     )
+
+
     general_output = ask_llm(general_prompt)
     general_subtasks = [line.split(". ", 1)[1] for line in general_output.strip().splitlines() if ". " in line]
 
