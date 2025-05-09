@@ -1,6 +1,0 @@
-loc,cyclomatic_complexity,halstead_volume,function_count,avg_cyclomatic_complexity,commits,contributors,lines_added,lines_deleted,owner,repo,language,complexity_mode,complexity_score,estimated_effort_hours,estimated_effort_person_months
-4044,810,43162.5,535,1.514018691588785,837,168,27422,9084,flask-restful,flask-restful,Python,power,0.568,1179.57,7.76
-11478,1218,34149.0,915,1.3311475409836067,446,13,243648,34273,aviator,aviator,Ruby,power,0.546,3575.29,23.52
-15220,2508,165540.0,1241,2.0209508460918615,3412,222,181323,71170,pyeve,eve,Python,power,0.619,5527.31,36.36
-1500,91,4020.0,64,1.421875,155,5,14911,10479,phprest,phprest,PHP,power,0.557,388.82,2.56
-1251,343,7426.5,310,1.1064516129032258,162,7,13431,1090,hasib32,rest-api-with-lumen,PHP,power,0.517,295.36,1.94

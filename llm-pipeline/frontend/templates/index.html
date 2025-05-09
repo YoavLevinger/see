@@ -7,7 +7,11 @@
 </head>
 <body>
   <div class="container">
-    <h1>📈 Software Effort Estimation</h1>
+    <!-- XPERT Logo -->
+    <img src="/static/xpert_logo.png" alt="XPERT Logo" style="max-width: 300px; display: block; margin: 0 auto 20px auto;">
+
+<!--    <h1>📈 Software Effort Estimation</h1>-->
+    <h1>eXpert Planning and Estimation using Retrieval and Transformers</h1>
     <h2>🔧 Submit Your Software Task</h2>
 
     {% if message %}
@@ -36,33 +40,18 @@
     {% endif %}
   </div>
 
-<!--  <div id="loadingMessage" style="display: none; color: navy; font-weight: bold; text-align: center; margin-top: 20px;">-->
-<!--    ⏳ Processing... Please do not close the tab until the result is ready.-->
-<!--  </div>-->
+  <div id="loadingMessage" style="display: none; text-align: center; margin-top: 20px;">
+    <div class="spinner"></div>
+    <p style="color: navy; font-weight: bold;">Processing... This may take few minutes, please do not close this tab.</p>
+  </div>
 
-<!--<script>-->
-<!--  const form = document.querySelector("form");-->
-<!--  const loadingMessage = document.getElementById("loadingMessage");-->
+  <script>
+    const form = document.querySelector("form");
+    const loadingMessage = document.getElementById("loadingMessage");
 
-<!--  form.addEventListener("submit", function () {-->
-<!--    loadingMessage.style.display = "block";-->
-<!--  });-->
-<!--</script>-->
-
-<div id="loadingMessage" style="display: none; text-align: center; margin-top: 20px;">
-  <div class="spinner"></div>
-  <p style="color: navy; font-weight: bold;">Processing... This may take few minutes, please do not close this tab.</p>
-</div>
-
-<script>
-  const form = document.querySelector("form");
-  const loadingMessage = document.getElementById("loadingMessage");
-
-  form.addEventListener("submit", function () {
-    loadingMessage.style.display = "block";
-  });
-</script>
-
-
+    form.addEventListener("submit", function () {
+      loadingMessage.style.display = "block";
+    });
+  </script>
 </body>
 </html>

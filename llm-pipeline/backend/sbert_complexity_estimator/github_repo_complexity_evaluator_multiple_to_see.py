@@ -1,9 +1,4 @@
 
-# github_repo_complexity_evaluator_multiple_to_see.py
-# Author: Yoav Levinger
-# Purpose: Evaluate complexity and effort estimation of local and GitHub-hosted codebases
-# using the academic PERT-based model built on LOC, CC, Halstead Volume, and AST Depth.
-
 import os
 import tempfile
 import shutil
@@ -28,6 +23,8 @@ def clone_repo(owner, repo_name):
     return repo_path, temp_dir
 
 # Analyze a GitHub repo and return effort estimation using academic model
+#complexity_mode is a placeholder for future extensions (e.g., switching between
+# academic and heuristic models), but in the current version, it is metadata only — it does not affect computation
 def evaluate_repo_complexity(owner, repo_name, complexity_mode="academic"):
     print(f"🔍 Evaluating repository: {owner}/{repo_name}")
 
