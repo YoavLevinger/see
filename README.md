@@ -198,7 +198,9 @@ Or via the more user friendly web ui
 ```
 http://localhost:8090/
 ```
-![img.png](images/web-ui.png)
+![img.png](images/web-ui-01.png)
+
+
 
 Trigger processing:
 ```bash
