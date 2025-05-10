@@ -144,6 +144,19 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+### Troubleshoot pip packages (Linux version dependant)
+```bash
+sudo apt update
+sudo apt install -y libcairo2-dev libgirepository1.0-dev pkg-config python3-dev gir1.2-gtk-3.0 libcairo2-dev pkg-config
+sudo apt install -y build-essential meson ninja-build python3-apt python3-debian libsystemd-dev pkg-config python3-systemd 
+sudo apt install -y ubuntu-drivers-common ubuntu-pro-client ufw unattended-upgrades usb-creator xdg-utils wkhtmltopdf librsync-dev
+sudo apt install -y libpango-1.0-0 libgdk-pixbuf2.0-0 libcairo2 libffi-dev libjpeg-dev libxml2 libxslt1-dev libz-dev libfontconfig1
+sudo apt install -y libffi-dev libjpeg-dev libxml2-dev libxslt1-dev libpango1.0-dev libgdk-pixbuf2.0-dev libcups2-dev
+sudo apt install -y build-essential pkg-config python3-dev
+```
+
+
+
 ### 2. 🤖 Install Ollama + Mistral
 
 **Linux / macOS / Windows (WSL):**

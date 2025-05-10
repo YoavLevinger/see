@@ -51,6 +51,7 @@ async def estimate_all_effort(req: CombinedEstimationRequest):
     print(f"\n[INPUT] Description: {req.description}")
     print(f"[INPUT] Local Folder Path: {req.local_folder_path}")
 
+    os.makedirs("temp", exist_ok=True)
     with tempfile.TemporaryDirectory(dir="./temp") as temp_dir:
         try:
             # Step 1: Retrieve similar repos
