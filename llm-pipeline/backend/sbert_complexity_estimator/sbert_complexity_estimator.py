@@ -35,7 +35,7 @@ async def estimate_effort(req: EstimationRequest):
     logging.info("🔍 Received request to estimate effort for description: %s", req.description)
 
     # Ensure temp folder exists
-    os.makedirs("./temp", exist_ok=True)
+    os.makedirs("temp", exist_ok=True)
 
     # Create a temporary working directory for cloned repos
     with tempfile.TemporaryDirectory(dir="./temp") as temp_dir:

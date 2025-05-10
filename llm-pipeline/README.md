@@ -155,7 +155,7 @@ sudo apt install -y libffi-dev libjpeg-dev libxml2-dev libxslt1-dev libpango1.0-
 sudo apt install -y build-essential pkg-config python3-dev
 ```
 
-
+- NOTE: Development done under Ubuntu Linux and never was tested in Windows/MAC.
 
 ### 2. 🤖 Install Ollama + Mistral
 
