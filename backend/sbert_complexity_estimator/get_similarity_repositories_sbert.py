@@ -4,7 +4,7 @@ import torch
 import json
 from sentence_transformers import SentenceTransformer, util
 
-DB_SQL_PATH = "sdee_lite_description_vectorized.sql"
+DB_SQL_PATH = "data-prep-and-crawlers/dataset/sdee_lite_description_vectorized.sql"
 VECTOR_TABLE = "sbert_description_vectorized"
 TOP_K = 5
 

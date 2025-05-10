@@ -1,11 +1,11 @@
 
-# 🧠 LLM-Pipeline User Manual
+# 🧠 XPERT Software Effort Estimation - LLM-Pipeline
 
 ---
 
 ## 🔍 General Description
 
-The `llm-pipeline` is an AI-driven software effort estimation system. It transforms a natural language description of a software task into a structured implementation plan including subtasks, relevant code snippets, PDF documentation, and estimated complexity metrics. It uses modular FastAPI services for processing and integrates SBERT for semantic similarity, Mistral (via Ollama), and rule-based advisors.
+The `XPERT Software Effort Estimation` is an AI-driven software effort estimation system. It transforms a natural language description of a software task into a structured implementation plan including subtasks, relevant code snippets, PDF documentation, and estimated complexity metrics. It uses modular FastAPI services for processing and integrates SBERT for semantic similarity, Mistral (via Ollama), and rule-based advisors.
 
 ---
 
