@@ -1,0 +1,1 @@
+Ensure user input is validated. Avoid hardcoding credentials. Use secure file handling.

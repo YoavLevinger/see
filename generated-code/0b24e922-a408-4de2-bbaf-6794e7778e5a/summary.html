@@ -1,0 +1,1339 @@
+
+        <html>
+        <head>
+          <style>
+            table {
+              width: 100%;
+              border-collapse: collapse;
+              margin-top: 1em;
+            }
+            th, td {
+              border: 1px solid #aaa;
+              padding: 8px;
+              text-align: left;
+            }
+            th {
+              background-color: #f2f2f2;
+            }
+          </style>
+        </head>
+        <body>
+        <h1>📄 LLM Pipeline Summary</h1>
+<h2>🧾 Description</h2>
+<p>Develop a billing calculator for cloud usage</p>
+<h2>✅ Subtasks</h2>
+<ol>
+<li>Project Initiation</li>
+<li>Research and Analysis</li>
+<li>System Design</li>
+<li>Technology Stack Selection</li>
+<li>Development Environment Setup</li>
+<li>Frontend Development</li>
+<li>Backend Development</li>
+<li>Database Design and Implementation</li>
+<li>Integration and Testing</li>
+<li>Performance Optimization</li>
+<li>Security Measures Implementation</li>
+<li>Error Handling and Reporting</li>
+<li>User Testing</li>
+<li>Documentation</li>
+<li>Quality Assurance (QA) Testing</li>
+<li>Deployment Planning</li>
+<li>Production Deployment</li>
+<li>Maintenance and Support</li>
+<li>Performance Monitoring and Logging</li>
+<li>Scalability Planning</li>
+<li>Disaster Recovery and Business Continuity Planning</li>
+<li>Security Audit and Compliance</li>
+<li>User Feedback Collection and Iteration</li>
+<li>Marketing and Promotion</li>
+<li>Analytics Integration</li>
+<li>User Onboarding</li>
+<li>Customer Support</li>
+<li>Compliance with Data Privacy Laws</li>
+<li>Continuous Improvement</li>
+<li>Project Closure</li>
+</ol>
+<h2>💻 Developer Subtasks</h2>
+<ol>
+<li>Design the structure for CloudUsage data model (classes or structures)</li>
+<li>Implement method to add new usage record (timestamp, resource type, and usage amount)</li>
+<li>Create a method to retrieve total usage for a specific resource type</li>
+<li>Implement a method to calculate daily billing for each resource type</li>
+<li>Write a function to calculate monthly billing for each resource type</li>
+<li>Develop a function to calculate yearly billing for each resource type</li>
+<li>Create a method to calculate the total billing for all resources combined</li>
+<li>Implement a method to display the detailed usage and billing report (by resource type and total)</li>
+<li>Write a function to save the usage records in a persistent storage (file or database)</li>
+<li>Develop a method to load usage records from persistent storage</li>
+<li>Create a function to validate the input usage record before adding it to the storage</li>
+<li>Implement a method for handling errors during data loading/saving process</li>
+<li>Write a test case for adding new usage records</li>
+<li>Test the function to retrieve total usage for a specific resource type</li>
+<li>Develop and run tests for daily, monthly, and yearly billing calculations</li>
+<li>Test the function to calculate the total billing for all resources combined</li>
+<li>Create and implement a test case for detailed usage and billing report generation</li>
+<li>Write a test case for saving/loading usage records from persistent storage</li>
+<li>Test the validation of input usage record before adding it to the storage</li>
+<li>Test error handling during data loading/saving process</li>
+<li>Implement user interface for entering and viewing the usage records (if applicable)</li>
+<li>Write code to connect to the database if using a relational database system</li>
+<li>Create SQL statements for creating tables, inserting, updating, and querying data in the database (if applicable)</li>
+<li>Test all the database-related operations with unit tests or integration tests</li>
+<li>Develop a function to handle user input and call the appropriate business logic functions (if applicable)</li>
+<li>Implement error handling for invalid user input (if applicable)</li>
+<li>Write code for formatting and displaying the output in an easy-to-read format (if applicable)</li>
+<li>Test the user interface functionality with a variety of test cases</li>
+<li>Optimize the performance of resource usage calculations, especially for large datasets (if necessary)</li>
+<li>Implement caching or lazy loading techniques to improve app performance (if applicable)</li>
+<li>Add comments and documentation throughout the codebase to explain what each function does</li>
+<li>Write unit tests for each function to ensure they are working as intended</li>
+<li>Refactor the code to follow best practices and make it more maintainable</li>
+<li>Review and test the refactored code thoroughly</li>
+<li>Prepare release notes detailing changes made in the new version of the billing calculator</li>
+<li>Create a build script or automate the build process using tools like Maven, Gradle, or others (if applicable)</li>
+<li>Test the build script and ensure that it works as expected with different configurations</li>
+<li>Deploy the billing calculator to a staging environment for testing before release</li>
+<li>Test the deployed application in the staging environment and fix any issues found</li>
+<li>Prepare and release the final version of the billing calculator to production.</li>
+</ol>
+<h2>📂 Code Files</h2>
+<h3><code>create_a_method_to_retrieve_total_usage_for_a_specific_resource_type.py</code></h3>
+<pre><code class="language-python">```python
+class ResourceUsageTracker:
+    def __init__(self):
+        self.usage = {}
+
+    def add_usage(self, resource_type, usage_amount):
+        if resource_type not in self.usage:
+            self.usage[resource_type] = 0
+        self.usage[resource_type] += usage_amount
+
+    def get_total_usage(self, resource_type):
+        if resource_type not in self.usage:
+            return None
+        return self.usage[resource_type]
+</code></pre>
+<p>This code defines a class <code>ResourceUsageTracker</code> that tracks the total usage of different resources. You can create an instance of this class and use the <code>add_usage()</code> method to add usage for a specific resource type, and <code>get_total_usage()</code> method to retrieve the total usage for a given resource type. If the resource type does not exist in the tracker, the <code>get_total_usage()</code> method will return <code>None</code>.</p>
+<pre><code>
+### `implement_error_handling_for_invalid_user_input_if_applicable_.py`
+
+```python
+```python
+def get_valid_input(prompt):
+    while True:
+        try:
+            user_input = input(prompt)
+            if user_input.isnumeric():
+                return int(user_input)
+            else:
+                print(&quot;Invalid input. Please enter a number.&quot;)
+        except ValueError:
+            print(&quot;Invalid input. Please enter a number.&quot;)
+</code></pre>
+<p>This function will keep prompting the user for an input until they provide a valid numeric input. It uses a try-except block to handle invalid inputs and provide an error message.</p>
+<pre><code>
+### `create_a_method_to_calculate_the_total_billing_for_all_resources_combined.py`
+
+```python
+```python
+class Resource:
+    def __init__(self, cost):
+        self.cost = cost
+
+    def get_cost(self):
+        return self.cost
+
+class Bill:
+    def __init__(self, resources):
+        self.resources = resources
+
+    def calculate_total(self):
+        total = 0
+        for resource in self.resources:
+            total += resource.get_cost()
+        return total
+</code></pre>
+<p>Example usage:</p>
+<pre><code class="language-python">resource1 = Resource(10)
+resource2 = Resource(5)
+bill = Bill([resource1, resource2])
+total = bill.calculate_total()
+print(total)  # Outputs: 15
+</code></pre>
+<pre><code>
+### `prepare_and_release_the_final_version_of_the_billing_calculator_to_production_.py`
+
+```python
+```python
+import sys
+from pathlib import Path
+import setuptools
+
+here = Path(__file__).parent
+
+setuptools.setup(
+    name='billing_calculator',
+    version='1.0.0',
+    description='Billing Calculator',
+    author='Your Name',
+    author_email='your.email@example.com',
+    url='https://github.com/YourGithubUsername/billing_calculator',
+    packages=setuptools.find_packages(),
+    scripts=[str(here / 'scripts' / 'billing_calculator')],
+    install_requires=[
+        'numpy&gt;=1.19.0',
+        'pandas&gt;=1.0.1',
+        'pytz&gt;=2018.9'
+    ],
+    entry_points={
+        'console_scripts': [
+            'billing_calculator = scripts.billing_calculator:main'
+        ]
+    },
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'Operating System :: OS Independent',
+    ],
+)
+
+# Prepare and release to production
+subprocess.check_call([sys.executable, '-m', 'build', '--format=src'], cwd=here)
+subprocess.check_call([sys.executable, '-m', 'sdist', '--formats', 'gztar'], cwd=here)
+subprocess.check_call([sys.executable, '-m', 'upload', '--repository', 'pypi', 'dist/*'])
+</code></pre>
+<p>This code uses the <code>setuptools</code> package to prepare and distribute the billing calculator as a Python package on PyPI (Python Package Index). The script assumes that you have already set up your PyPI credentials for uploading packages. Adjust the author, email, url, install_requires, classifiers, and scripts fields accordingly.</p>
+<pre><code>
+### `test_the_user_interface_functionality_with_a_variety_of_test_cases.py`
+
+```python
+```python
+import pytest
+from your_ui_module import YourUIClass
+
+@pytest.mark.parametrize(&quot;input, expected&quot;, [
+    (&quot;Test Input 1&quot;, &quot;Expected Output 1&quot;),
+    (&quot;Test Input 2&quot;, &quot;Expected Output 2&quot;),
+    # Add more test cases as needed
+])
+def test_your_ui_functionality(input, expected):
+    ui = YourUIClass()
+    result = ui.your_ui_function(input)
+    assert result == expected
+
+@pytest.mark.parametrize(&quot;button, should_be_enabled&quot;, [
+    (None, False),
+    (ui.Button1, True),
+    # Add more test cases as needed
+])
+def test_button_states(button, should_be_enabled):
+    ui = YourUIClass()
+    actual = button.isEnabled() if button else None
+    assert actual == should_be_enabled
+</code></pre>
+<pre><code>
+### `deploy_the_billing_calculator_to_a_staging_environment_for_testing_before_release.py`
+
+```python
+```python
+import os
+from fabric import Connection
+
+def deploy_billing_calculator():
+    repo_url = &quot;https://github.com/your-organization/billing-calculator.git&quot;
+    staging_server = &quot;staging.example.com&quot;
+    user = &quot;deployuser&quot;
+
+    with Connection(host=staging_server, user=user) as conn:
+        conn.run(f'mkdir -p ~/apps/{os.path.basename(repo_url)}')
+        conn.run(f'cd ~/apps/{os.path.basename(repo_url)}; git clone {repo_url}')
+        # Assuming you have a custom script to install and run the billing calculator
+        # Replace 'start-billing-calculator.sh' with your actual script path
+        conn.run(f'cd ~/apps/{os.path.basename(repo_url)} &amp;&amp; ./start-billing-calculator.sh')
+
+deploy_billing_calculator()
+</code></pre>
+<p>This script assumes you have Fabric installed and configured for the staging server, and a script named 'start-billing-calculator.sh' in the root directory of your billing calculator repository to handle installation and running the application.</p>
+<pre><code>
+### `develop_a_method_to_load_usage_records_from_persistent_storage.py`
+
+```python
+```python
+import pickle
+import os
+
+def load_usage_records(filepath):
+    if not os.path.exists(filepath):
+        return []
+
+    with open(filepath, 'rb') as f:
+        usage_records = pickle.load(f)
+
+    return usage_records
+</code></pre>
+<pre><code>
+### `create_a_function_to_validate_the_input_usage_record_before_adding_it_to_the_storage.py`
+
+```python
+```python
+def validate_usage(record):
+    try:
+        device_id = int(record['device_id'])
+        timestamp = float(record['timestamp'])
+        data_consumed = float(record['data_consumed'])
+
+        if 0 &lt;= device_id &lt; sys.maxsize and timestamp &gt;= 0 and data_consumed &gt; 0:
+            return True
+    except (KeyError, ValueError):
+        return False
+    return False
+</code></pre>
+<p>In this code, the validate_usage function takes a dictionary as an argument that contains 'device_id', 'timestamp' and 'data_consumed'. It checks if the values are integers for device_id and floats for timestamp and data_consumed. Additionally, it verifies that the values meet certain conditions (non-negative for device_id and data_consumed &gt; 0). If all checks pass, it returns True indicating valid input; otherwise False.</p>
+<pre><code>
+### `develop_and_run_tests_for_daily_monthly_and_yearly_billing_calculations.py`
+
+```python
+```python
+import unittest
+from datetime import timedelta, date
+
+class BillingTest(unittest.TestCase):
+    def setUp(self):
+        self.billing_rate = 10.0
+        self.base_day_duration = timedelta(hours=24)
+
+    def daily_billing(self, start_date, end_date):
+        days = (end_date - start_date).days + 1
+        return days * self.billing_rate
+
+    def monthly_billing(self, start_date, end_date):
+        first_day = date(start_date.year, start_date.month, 1)
+        last_day = end_date if (end_date.month == start_date.month and end_date.day &gt;= start_date.day) else date(start_date.year, end_date.month, 1).replace(day=end_date.day)
+        days_in_month = (last_day - first_day).days + 1
+        return self.daily_billing(first_day, last_day) * days_in_month * self.billing_rate
+
+    def yearly_billing(self, start_date, end_date):
+        start_year = start_date.year
+        end_year = end_date.year if end_date &gt; start_date else start_date.year + 1
+        return sum([self.monthly_billing(date(start_year, month=i+1, day=1), date(end_year, 12, 31)) for i in range(12)])
+
+    def test_daily_billing(self):
+        start_date = date(2022, 1, 1)
+        end_date = date(2022, 1, 5)
+        expected = 5 * self.billing_rate
+        self.assertEqual(self.daily_billing(start_date, end_date), expected)
+
+    def test_monthly_billing(self):
+        start_date = date(2022, 1, 1)
+        end_date = date(2022, 2, 1)
+        expected = (date(2022, 2, 1) - date(2022, 1, 1)).days * self.billing_rate * 31
+        self.assertEqual(self.monthly_billing(start_date, end_date), expected)
+
+    def test_yearly_billing(self):
+        start_date = date(2021, 10, 5)
+        end_date = date(2022, 9, 30)
+        expected = sum([self.monthly_billing(date(2021, month=i+1, day=1), date(2021, 12, 31)) for i in range(6)] + [self.monthly_billing(date(2022, month, day=1), date(2022, 9, 30)) for month in range(1, 10)])
+        self.assertEqual(self.yearly_billing(start_date, end_date), expected)
+
+if __name__ == '__main__':
+    unittest.main()
+</code></pre>
+<pre><code>
+### `develop_a_function_to_handle_user_input_and_call_the_appropriate_business_logic_functions_if_applica.py`
+
+```python
+```python
+def get_user_input():
+    user_choice = input(&quot;Enter your choice (add, remove, view): &quot;)
+    if user_choice in [&quot;add&quot;, &quot;remove&quot;, &quot;view&quot;]:
+        return user_choice
+    else:
+        print(&quot;Invalid choice. Please enter add, remove or view.&quot;)
+        return get_user_input()
+
+def business_logic(choice):
+    if choice == &quot;add&quot;:
+        # Implement add logic here
+    elif choice == &quot;remove&quot;:
+        # Implement remove logic here
+    elif choice == &quot;view&quot;:
+        # Implement view logic here
+</code></pre>
+<pre><code>
+### `write_code_for_formatting_and_displaying_the_output_in_an_easy_to_read_format_if_applicable_.py`
+
+```python
+```python
+def format_output(data):
+    header = &quot;{0:&lt;20} {1:&lt;10} {2:&lt;10}\n&quot;.format(&quot;Name&quot;, &quot;Age&quot;, &quot;Score&quot;)
+    lines = []
+    for name, age, score in data:
+        line = &quot;{0:&lt;20} {1:&lt;10} {2:&lt;10}\n&quot;.format(name, age, score)
+        lines.append(line)
+    return header + &quot;&quot;.join(lines)
+</code></pre>
+<p>Assuming the input data is in a list of tuples:</p>
+<pre><code class="language-python">data = [(&quot;Alice&quot;, 25, 80), (&quot;Bob&quot;, 30, 90), (&quot;Charlie&quot;, 19, 75)]
+</code></pre>
+<p>You can call the function like this:</p>
+<pre><code class="language-python">print(format_output(data))
+</code></pre>
+<pre><code>
+### `refactor_the_code_to_follow_best_practices_and_make_it_more_maintainable.py`
+
+```python
+```python
+import re
+from typing import List, Tuple
+
+def parse_line(line: str) -&gt; Tuple[str, int]:
+    pattern = r'^(\w+) (\d+)$'
+    match = re.match(pattern, line)
+    if not match:
+        raise ValueError(&quot;Invalid format&quot;)
+    return match.groups()
+
+def process_file(filename: str) -&gt; List[str]:
+    with open(filename, 'r') as file:
+        lines = [line.strip() for line in file]
+        parsed_lines = [parse_line(line) for line in lines if line]
+        return parsed_lines
+
+def calculate_totals(data: List[Tuple[str, int]]) -&gt; Tuple[int, int]:
+    total_elf_calories = 0
+    current_elf_calories = 0
+    for name, calories in data:
+        if calories == &quot;&quot;:
+            total_elf_calories += current_elf_calories
+            current_elf_calories = 0
+        else:
+            current_elf_calories += int(calories)
+    total_elf_calories += current_elf_calories
+    return total_elf_calories, max(data, key=lambda x: x[1])[1]
+</code></pre>
+<pre><code>
+### `write_a_test_case_for_saving_loading_usage_records_from_persistent_storage.py`
+
+```python
+```python
+import unittest
+from datetime import datetime
+import json
+from my_module import UsageRecord, Storage
+
+class TestStorage(unittest.TestCase):
+    def setUp(self):
+        self.storage = Storage('test_data.json')
+        self.record1 = UsageRecord(resource=&quot;CPU&quot;, usage=12345, timestamp=datetime(2022, 1, 1))
+        self.record2 = UsageRecord(resource=&quot;RAM&quot;, usage=67890, timestamp=datetime(2022, 2, 2))
+
+    def test_save(self):
+        self.storage.save(self.record1)
+        self.storage.save(self.record2)
+        saved = self.storage.load()
+        self.assertEqual(len(saved), 2)
+
+    def test_load(self):
+        self.storage.save(self.record1)
+        self.storage.save(self.record2)
+        loaded = self.storage.load()
+        self.assertCountEqual([r.resource for r in loaded], ['CPU', 'RAM'])
+        self.assertAlmostEqual([r.usage for r in loaded], [12345, 67890])
+        self.assertEqual(len([r.timestamp for r in loaded]), 2)
+
+    def tearDown(self):
+        try:
+            open('test_data.json', 'r').close()
+        except FileNotFoundError:
+            pass
+        else:
+            open('test_data.json', 'w').close()
+
+if __name__ == &quot;__main__&quot;:
+    unittest.main()
+</code></pre>
+<p>Here, <code>my_module</code> is a hypothetical Python module that contains the <code>UsageRecord</code> and <code>Storage</code> classes with appropriate implementations for persistently saving/loading usage records in JSON format. The code above assumes that those classes have already been implemented.</p>
+<pre><code>
+### `test_the_function_to_retrieve_total_usage_for_a_specific_resource_type.py`
+
+```python
+```python
+import boto3
+
+def get_resource_usage(resource_type):
+    session = boto3.Session(profile_name='your_aws_profile')
+    client = session.client('cloudwatch', region_name='us-west-2') # change the region if needed
+
+    namespace = 'AWS/EC2'
+    metric = f'CPUUtilization' if resource_type == 'EC2 instance' else 'ElasticIngress' if resource_type == 'Application Load Balancer' else None
+
+    if not metric:
+        return None
+
+    start_time = int(datetime.datetime.now(tz=pytz.utc) - datetime.timedelta(days=30)).timestamp()
+    end_time = int(datetime.datetime.now(tz=pytz.utc).timestamp())
+
+    response = client.get_metric_statistics(
+        Namespace=namespace,
+        MetricName=metric,
+        Dimensions=[{'Name': 'ResourceId', 'Value': 'your_resource_id'}], # replace with your resource id
+        StartTime=start_time,
+        EndTime=end_time,
+        Period=86400, # 1 day in seconds
+        Stat='SampleCount'
+    )
+
+    total = response['Datapoints'][0]['SampleCount'] if response['Datapoints'] else None
+    return total
+</code></pre>
+<pre><code>
+### `test_the_function_to_calculate_the_total_billing_for_all_resources_combined.py`
+
+```python
+```python
+class Resource:
+    def __init__(self, price):
+        self.price = price
+
+    def get_billing(self):
+        return self.price
+
+def total_billing(resources):
+    billing_sum = 0
+    for resource in resources:
+        billing_sum += resource.get_billing()
+    return billing_sum
+
+# Example usage:
+resource1 = Resource(10)
+resource2 = Resource(20)
+all_resources = [resource1, resource2]
+total_bill = total_billing(all_resources)
+print(total_bill)  # Outputs: 30
+</code></pre>
+<pre><code>
+### `implement_caching_or_lazy_loading_techniques_to_improve_app_performance_if_applicable_.py`
+
+```python
+```python
+from functools import lru_cache
+
+@lru_cache(maxsize=128)
+def expensive_function(arg):
+    # Your expensive function implementation here
+    pass
+
+# Usage of the lazy-loaded function
+expensive_function('some_arg')
+</code></pre>
+<p>In this example, <code>expensive_function</code> uses the LRU (Least Recently Used) cache from the <code>functools</code> module. This means that the most recently used cache entries are kept as long as possible and the least recently used entries are removed first when the cache exceeds its maximum size. The maximum size is set to 128 in this example, but it can be adjusted according to your needs.</p>
+<pre><code>
+### `add_comments_and_documentation_throughout_the_codebase_to_explain_what_each_function_does.py`
+
+```python
+```python
+&quot;&quot;&quot;
+This module contains utility functions for data processing.
+
+:author: Your Name
+:date: DD/MM/YYYY
+&quot;&quot;&quot;
+
+# Function to calculate the average of a list of numbers
+def calc_average(numbers: List[float]) -&gt; float:
+    &quot;&quot;&quot;
+    Calculates the average of a given list of numbers.
+
+    :param numbers: A list of floating point numbers.
+    :return: The average value as a floating point number.
+    &quot;&quot;&quot;
+    total = sum(numbers)
+    return total / len(numbers)
+
+# Function to check if a given string is a palindrome
+def is_palindrome(string: str) -&gt; bool:
+    &quot;&quot;&quot;
+    Checks if the given string is a palindrome (reads the same forwards and backwards).
+
+    :param string: A string to be checked.
+    :return: True if the string is a palindrome, False otherwise.
+    &quot;&quot;&quot;
+    return string == string[::-1]
+</code></pre>
+<pre><code>
+### `optimize_the_performance_of_resource_usage_calculations_especially_for_large_datasets_if_necessary_.py`
+
+```python
+```python
+import numpy as np
+
+def batch_resource_usage(data, batch_size=10000):
+    total = 0
+    for i in range(0, len(data), batch_size):
+        batch = data[i:i+batch_size]
+        resources = calculate_resources(batch)
+        total += resources
+    return total
+
+def calculate_resources(data):
+    # Optimized resource usage calculation for large datasets (e.g., using vectorized operations with numpy)
+    # Replace this function with your custom implementation
+    pass
+</code></pre>
+<p>In the provided code, the <code>batch_resource_usage</code> function calculates the total resource usage of a large dataset by processing it in batches. This approach can significantly reduce memory usage when dealing with very large datasets, as only small portions of data need to be loaded into memory at any given time.</p>
+<p>The <code>calculate_resources</code> function is where you should implement your custom optimization for resource usage calculation. It takes a batch of data and returns the corresponding resource usage. The example I provided leaves this function empty, waiting for your implementation.</p>
+<pre><code>
+### `implement_a_method_to_display_the_detailed_usage_and_billing_report_by_resource_type_and_total_.py`
+
+```python
+```python
+from collections import defaultdict
+
+class ResourceUsageReport:
+    def __init__(self):
+        self.usage_report = defaultdict(lambda: 0)
+        self.billing_report = defaultdict(float)
+
+    def log_usage(self, resource_type, hours_used):
+        self.usage_report[resource_type] += hours_used
+
+    def log_bill(self, resource_type, cost_per_hour):
+        self.billing_report[resource_type] += cost_per_hour * self.usage_report[resource_type]
+
+    def display_report(self):
+        print(&quot;\nDetailed Usage and Billing Report&quot;)
+        print(&quot;----------------------------------&quot;)
+        for resource_type, usage in sorted(self.usage_report.items()):
+            bill = self.billing_report[resource_type]
+            print(f&quot;{resource_type}: {usage} hours used ({'$' + str(bill)})&quot;)
+</code></pre>
+<pre><code>
+### `write_unit_tests_for_each_function_to_ensure_they_are_working_as_intended.py`
+
+```python
+```python
+import unittest
+from functions import function1, function2, function3
+
+class TestFunctions(unittest.TestCase):
+    def test_function1(self):
+        self.assertEqual(function1([1, 2, 3]), [3, 2, 1])
+        self.assertRaises(TypeError, function1, &quot;string&quot;)
+
+    def test_function2(self):
+        self.assertEqual(function2(&quot;Hello&quot;), &quot;olleH&quot;)
+        self.assertRaises(ValueError, function2, None)
+
+    def test_function3(self):
+        self.assertEqual(function3([1, 2, 3]), [True, False, True])
+        self.assertRaises(TypeError, function3, &quot;list&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    unittest.main()
+</code></pre>
+<p>In this code, I assumed you have a module named <code>functions.py</code> containing the functions: function1, function2, and function3. Replace the implementation of these functions according to your requirements. The test cases check if the functions return the expected results for valid inputs and if they raise appropriate exceptions for invalid inputs.</p>
+<pre><code>
+### `write_a_test_case_for_adding_new_usage_records.py`
+
+```python
+```python
+import unittest
+from your_module import UsageRecord, RecordsCollection
+
+class TestUsageRecords(unittest.TestCase):
+    def setUp(self):
+        self.records = RecordsCollection()
+
+    def test_add_new_usage_record(self):
+        record = UsageRecord(&quot;2022-12-31&quot;, &quot;device1&quot;, 5)
+        self.records.add_record(record)
+        self.assertEqual(len(self.records._records), 1)
+        self.assertEqual(self.records.get_usage_record_by_date(&quot;2022-12-31&quot;), record)
+
+if __name__ == '__main__':
+    unittest.main()
+</code></pre>
+<pre><code>
+### `create_sql_statements_for_creating_tables_inserting_updating_and_querying_data_in_the_database_if_ap.py`
+
+```python
+```python
+import psycopg2
+
+# Create connection to the PostgreSQL database
+conn = psycopg2.connect(
+    dbname=&quot;mydb&quot;,
+    user=&quot;username&quot;,
+    password=&quot;password&quot;,
+    host=&quot;localhost&quot;
+)
+
+cur = conn.cursor()
+
+# Create table for users
+cur.execute(&quot;&quot;&quot;
+CREATE TABLE IF NOT EXISTS users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+&quot;&quot;&quot;)
+
+# Insert user into users table
+cur.execute(&quot;INSERT INTO users (username, email, password) VALUES (%s, %s, %s)&quot;, (&quot;john_doe&quot;, &quot;john@example.com&quot;, &quot;password123&quot;))
+
+# Update user's password in the users table
+cur.execute(&quot;UPDATE users SET password=%s WHERE username=%s&quot;, (&quot;new_password&quot;, &quot;john_doe&quot;))
+
+# Query data from the users table
+cur.execute(&quot;SELECT * FROM users&quot;)
+rows = cur.fetchall()
+for row in rows:
+    print(row)
+
+# Commit and close connection
+conn.commit()
+cur.close()
+conn.close()
+</code></pre>
+<pre><code>
+### `test_the_validation_of_input_usage_record_before_adding_it_to_the_storage.py`
+
+```python
+```python
+class UsageRecord:
+    def __init__(self, user_id, operation, timestamp):
+        self.user_id = int(user_id)
+        self.operation = operation.lower()
+        self.timestamp = timestamp
+
+    @staticmethod
+    def validate_input(user_id, operation, timestamp):
+        if not isinstance(user_id, int) or user_id &lt; 0:
+            return False
+
+        if len(operation) &lt; 3 or len(operation) &gt; 20:
+            return False
+
+        try:
+            datetime.strptime(timestamp, &quot;%Y-%m-%d %H:%M:%S&quot;)
+        except ValueError:
+            return False
+
+        return True
+
+    def add_to_storage(self):
+        if self.validate_input(self.user_id, self.operation, self.timestamp):
+            # Add to storage logic here
+            pass
+        else:
+            raise ValueError(&quot;Invalid usage record&quot;)
+</code></pre>
+<pre><code>
+### `test_all_the_database_related_operations_with_unit_tests_or_integration_tests.py`
+
+```python
+```python
+import unittest
+from mock import patch
+from your_database_module import DatabaseConnection, DatabaseOperation
+
+class TestDatabase(unittest.TestCase):
+    @patch('your_database_module.DatabaseConnection')
+    def test_connection(self, mock_conn):
+        mock_conn.return_value.connect.return_value = None
+        db_conn = DatabaseConnection()
+        self.assertIsNotNone(db_conn)
+
+    @patch('your_database_module.DatabaseOperation')
+    def test_create(self, mock_op):
+        mock_op.execute.return_value = True
+        op = DatabaseOperation(db_conn=None)
+        self.assertTrue(op.create('table'))
+
+    @patch('your_database_module.DatabaseConnection')
+    def test_connection_error(self, mock_conn):
+        mock_conn.return_value.connect.return_value = Exception('Error connecting')
+        db_conn = DatabaseConnection()
+        self.assertRaises(Exception, db_conn)
+
+if __name__ == '__main__':
+    unittest.main()
+</code></pre>
+<p>Replace <code>your_database_module</code> with the actual module name where the <code>DatabaseConnection</code> and <code>DatabaseOperation</code> classes are defined. The test code mocks the database connection to simulate different scenarios and tests various operations like creating a table using unit tests.</p>
+<pre><code>
+### `review_and_test_the_refactored_code_thoroughly.py`
+
+```python
+```python
+import unittest
+from refactored_module import FunctionA, FunctionB
+
+class TestRefactoredCode(unittest.TestCase):
+    def setUp(self):
+        self.func_a = FunctionA()
+        self.func_b = FunctionB()
+
+    def test_function_a(self):
+        self.assertEqual(self.func_a.process([1, 2, 3]), [2, 4, 8])
+        self.assertEqual(self.func_a.process([]), [])
+        self.assertEqual(self.func_a.process([0]), [0])
+
+    def test_function_b(self):
+        self.assertEqual(self.func_b.process('hello world'), 'olleh dlrow')
+        self.assertEqual(self.func_b.process(''), '')
+        self.assertEqual(self.func_b.process('xyz'), 'zyx')
+
+if __name__ == '__main__':
+    unittest.main()
+</code></pre>
+<p>Assuming that the <code>refactored_module.py</code> contains the following code:</p>
+<pre><code class="language-python">class FunctionA:
+    def process(self, numbers):
+        return [x**2 for x in numbers]
+
+class FunctionB:
+    def process(self, string):
+        return string[::-1]
+</code></pre>
+<pre><code>
+### `create_a_build_script_or_automate_the_build_process_using_tools_like_maven_gradle_or_others_if_appli.py`
+
+```python
+```python
+import os
+import shutil
+from subprocess import call
+
+# Define paths and project name
+project_name = &quot;my_project&quot;
+src_dir = f&quot;src/{project_name}&quot;
+build_dir = f&quot;{project_name}/build&quot;
+dist_dir = f&quot;{project_name}/dist&quot;
+
+# Ensure directories are created
+os.makedirs(build_dir, exist_ok=True)
+os.makedirs(dist_dir, exist_ok=True)
+
+# Copy source files to build directory
+shutil.copytree(src_dir, build_dir)
+
+# Run build command (replace with appropriate command for your tool)
+call([&quot;gradle&quot;, &quot;build&quot;], cwd=build_dir)
+
+# Copy built files to distribution directory
+shutil.copytree(f&quot;{build_dir}/build/outputs/jar&quot;, dist_dir)
+</code></pre>
+<p>This code uses the <code>os</code>, <code>shutil</code>, and <code>subprocess</code> modules in Python 3. It assumes you are using Gradle as your build tool, but you can replace the "gradle build" command with the appropriate one for other tools like Maven or others.</p>
+<pre><code>
+### `create_and_implement_a_test_case_for_detailed_usage_and_billing_report_generation.py`
+
+```python
+```python
+import unittest
+from datetime import datetime, timedelta
+
+class TestDetailedUsageReport(unittest.TestCase):
+    def setUp(self):
+        self.start_date = datetime(2021, 1, 1)
+        self.end_date = datetime(2021, 1, 7)
+        self.usage_data = [
+            (&quot;John Doe&quot;, &quot;api_calls&quot;, 500, self.start_date),
+            (&quot;Jane Smith&quot;, &quot;api_calls&quot;, 800, self.start_date + timedelta(days=1)),
+            (&quot;John Doe&quot;, &quot;storage&quot;, 100, self.start_date + timedelta(days=2)),
+            (&quot;John Doe&quot;, &quot;api_calls&quot;, 300, self.start_date + timedelta(days=3)),
+            (&quot;Jane Smith&quot;, &quot;storage&quot;, 250, self.end_date),
+        ]
+
+    def test_generate_report(self):
+        from report import DetailedUsageReport
+        report = DetailedUsageReport(self.start_date, self.end_date)
+        report.add_usage(self.usage_data)
+        expected_output = [
+            (&quot;John Doe&quot;, &quot;api_calls&quot;, 800, self.start_date),
+            (&quot;Jane Smith&quot;, &quot;api_calls&quot;, 0, self.start_date + timedelta(days=1)),
+            (&quot;John Doe&quot;, &quot;storage&quot;, 100, self.start_date + timedelta(days=2)),
+            (&quot;Jane Smith&quot;, &quot;storage&quot;, 250, self.end_date),
+        ]
+        self.assertEqual(report.generate(), expected_output)
+
+class TestBillingReport(unittest.TestCase):
+    def setUp(self):
+        self.start_date = datetime(2021, 1, 1)
+        self.end_date = datetime(2021, 1, 7)
+        self.usage_data = [
+            (&quot;John Doe&quot;, &quot;api_calls&quot;, 500, self.start_date),
+            (&quot;Jane Smith&quot;, &quot;api_calls&quot;, 800, self.start_date + timedelta(days=1)),
+            (&quot;John Doe&quot;, &quot;storage&quot;, 100, self.start_date + timedelta(days=2)),
+            (&quot;John Doe&quot;, &quot;api_calls&quot;, 300, self.start_date + timedelta(days=3)),
+            (&quot;Jane Smith&quot;, &quot;storage&quot;, 250, self.end_date),
+        ]
+
+    def test_generate_report(self):
+        from report import BillingReport
+        rate = {
+            (&quot;John Doe&quot;, &quot;api_calls&quot;): 0.1,
+            (&quot;Jane Smith&quot;, &quot;api_calls&quot;): 0.2,
+            (&quot;John Doe&quot;, &quot;storage&quot;): 5,
+            (&quot;Jane Smith&quot;, &quot;storage&quot;): 4,
+        }
+        report = BillingReport(self.start_date, self.end_date, rate)
+        report.add_usage(self.usage_data)
+        expected_output = [
+            (&quot;John Doe&quot;, &quot;api_calls&quot;, 80, self.start_date),
+            (&quot;Jane Smith&quot;, &quot;api_calls&quot;, 160, self.start_date + timedelta(days=1)),
+            (&quot;John Doe&quot;, &quot;storage&quot;, 500, self.start_date + timedelta(days=2)),
+            (&quot;Jane Smith&quot;, &quot;storage&quot;, 1000, self.end_date),
+        ]
+        self.assertEqual(report.generate(), expected_output)
+</code></pre>
+<p>Assuming the <code>report.py</code> file contains the following code:</p>
+<pre><code class="language-python">class DetailedUsageReport():
+    def __init__(self, start_date, end_date):
+        self.start_date = start_date
+        self.end_date = end_date
+        self.data = []
+
+    def add_usage(self, usage_data):
+        for item in usage_data:
+            self.data.append((item[0], item[1], item[2], max(self.start_date, item[3])))
+
+    def generate(self):
+        return sorted(self.data, key=lambda x: x[3])
+
+class BillingReport():
+    def __init__(self, start_date, end_date, rate):
+        self.start_date = start_date
+        self.end_date = end_date
+        self.rate = rate
+        self.data = []
+
+    def add_usage(self, usage_data):
+        for item in usage_data:
+            self.data.append((item[0], item[1], item[2] * self.rate[(item[0], item[1])], max(self.start_date, item[3])))
+
+    def generate(self):
+        return sorted(self.data, key=lambda x: x[3])
+</code></pre>
+<pre><code>
+### `implement_method_to_add_new_usage_record_timestamp_resource_type_and_usage_amount_.py`
+
+```python
+```python
+class UsageRecord:
+    def __init__(self, timestamp, resource_type, usage_amount):
+        self.timestamp = timestamp
+        self.resource_type = resource_type
+        self.usage_amount = usage_amount
+
+def add_usage_record(records, timestamp, resource_type, usage_amount):
+    new_record = UsageRecord(timestamp, resource_type, usage_amount)
+    records.append(new_record)
+    return records
+</code></pre>
+<p>You can use this class and method to create a new UsageRecord object with given timestamp, resource_type, and usage_amount, and add it to the list of records. This implementation assumes that you have an initial empty list to store the usage records. For example:</p>
+<pre><code class="language-python">records = []
+add_usage_record(records, &quot;2022-01-01 10:00:00&quot;, &quot;CPU&quot;, 50)
+add_usage_record(records, &quot;2022-01-01 11:00:00&quot;, &quot;RAM&quot;, 100)
+</code></pre>
+<pre><code>
+### `test_error_handling_during_data_loading_saving_process.py`
+
+```python
+```python
+import csv
+
+class DataLoader:
+    def __init__(self, file_path):
+        self.file_path = file_path
+
+    def load(self):
+        try:
+            with open(self.file_path, 'r') as file:
+                reader = csv.reader(file)
+                data = list(reader)
+            return data
+        except FileNotFoundError:
+            print(&quot;File not found&quot;)
+        except Exception as e:
+            print(f&quot;Unexpected error occurred during loading data: {e}&quot;)
+
+    def save(self, data):
+        try:
+            with open(self.file_path, 'w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerows(data)
+        except FileNotFoundError:
+            print(&quot;File not found&quot;)
+        except Exception as e:
+            print(f&quot;Unexpected error occurred during saving data: {e}&quot;)
+</code></pre>
+<pre><code>
+### `write_a_function_to_calculate_monthly_billing_for_each_resource_type.py`
+
+```python
+```python
+def calculate_monthly_billing(usage):
+    resource_rates = {
+        &quot;data&quot;: 0.1,
+        &quot;computation&quot;: 0.075,
+        &quot;storage&quot;: 0.03
+    }
+
+    billing = {}
+
+    for resource_type, usage_amount in usage.items():
+        billing[resource_type] = resource_rates.get(resource_type, 0) * usage_amount
+
+    return billing
+</code></pre>
+<pre><code>
+### `implement_a_method_to_calculate_daily_billing_for_each_resource_type.py`
+
+```python
+```python
+class Resource:
+    def __init__(self, usage, rate):
+        self.usage = usage
+        self.rate = rate
+
+class Billing:
+    def __init__(self, resources):
+        self.resources = resources
+
+    def daily_billing(self):
+        total_bill = 0
+        for resource in self.resources:
+            total_bill += resource.usage * resource.rate
+        return total_bill
+
+# Example usage
+data = [Resource(10, 5), Resource(20, 7)]  # First element is usage, second is rate
+billing_calculator = Billing(data)
+print(billing_calculator.daily_billing())
+</code></pre>
+<pre><code>
+### `write_a_function_to_save_the_usage_records_in_a_persistent_storage_file_or_database_.py`
+
+```python
+```python
+import json
+
+def save_usage_records(records, filename='usage_records.json'):
+    try:
+        with open(filename, 'w') as f:
+            json.dump(records, f)
+    except Exception as e:
+        print(f&quot;Error saving usage records: {e}&quot;)
+
+def load_usage_records(filename='usage_records.json'):
+    try:
+        with open(filename, 'r') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {}
+</code></pre>
+<pre><code>
+### `develop_a_function_to_calculate_yearly_billing_for_each_resource_type.py`
+
+```python
+```python
+def calculate_yearly_billing(resource_type, usage, price):
+    def daily_billing(usage, price):
+        return usage * price
+
+    def yearly_billing(days_in_year=365):
+        return daily_billing(usage, price) * days_in_year
+
+    return {resource_type: yearly_billing}
+</code></pre>
+<pre><code>
+### `implement_user_interface_for_entering_and_viewing_the_usage_records_if_applicable_.py`
+
+```python
+```python
+import tkinter as tk
+from tkinter import messagebox
+
+class UsageRecordUI:
+    def __init__(self, root):
+        self.root = root
+        self.root.title(&quot;Usage Record UI&quot;)
+        self.frame = tk.Frame(self.root)
+        self.frame.pack()
+
+        self.entry_id = tk.Entry(self.frame, width=20)
+        self.entry_id.grid(row=0, column=0, padx=10, pady=10)
+
+        self.entry_date = tk.Entry(self.frame, width=20)
+        self.entry_date.grid(row=1, column=0, padx=10, pady=10)
+
+        self.entry_usage = tk.Entry(self.frame, width=20)
+        self.entry_usage.grid(row=2, column=0, padx=10, pady=10)
+
+        self.btn_add = tk.Button(self.frame, text=&quot;Add Record&quot;, command=self.add_record)
+        self.btn_add.grid(row=3, column=0, padx=10, pady=10)
+
+        self.listbox = tk.Listbox(self.frame, width=50, height=10)
+        self.listbox.grid(row=4, column=0, rowspan=5, padx=10, pady=10)
+
+    def add_record(self):
+        id = self.entry_id.get()
+        date = self.entry_date.get()
+        usage = self.entry_usage.get()
+
+        if not id or not date or not usage:
+            messagebox.showerror(&quot;Error&quot;, &quot;All fields are required.&quot;)
+            return
+
+        self.listbox.insert(tk.END, f&quot;ID: {id}, Date: {date}, Usage: {usage}&quot;)
+        self.clear_entry()
+
+    def clear_entry(self):
+        self.entry_id.delete(0, tk.END)
+        self.entry_date.delete(0, tk.END)
+        self.entry_usage.delete(0, tk.END)
+
+root = tk.Tk()
+UsageRecordUI(root)
+root.mainloop()
+</code></pre>
+<p>This code creates a simple Tkinter GUI for entering and viewing usage records. The user can input an ID, date, and usage in the text boxes, then click "Add Record" to add the record to the listbox below. The entries are automatically cleared after adding a record.</p>
+<pre><code>
+### `design_the_structure_for_cloudusage_data_model_classes_or_structures_.py`
+
+```python
+```python
+from datetime import datetime
+from peewee import *
+
+db = SqliteDatabase('cloud_usage.db')
+
+class BaseModel(Model):
+    class Meta:
+        database = db
+
+class CloudProvider(BaseModel):
+    provider_id = IntegerField()
+    name = CharField()
+
+class Service(BaseModel):
+    service_id = IntegerField()
+    name = CharField()
+    cloud_provider = ForeignKeyField(CloudProvider, backref='services')
+
+class Usage(BaseModel):
+    usage_id = IntegerField()
+    timestamp = DateTimeField(default=datetime.now)
+    service = ForeignKeyField(Service, backref='usages')
+    resource = CharField()
+    amount = FloatField()
+</code></pre>
+<p>This code uses the Peewee ORM for SQLite to define a CloudUsage data model. The <code>CloudProvider</code> class represents cloud providers with an id and name. The <code>Service</code> class represents services offered by a cloud provider, linking back to the <code>CloudProvider</code>. The <code>Usage</code> class represents usage of a service, recording the timestamp, resource used, and amount. Each Usage is linked to its corresponding Service.</p>
+<pre><code>
+### `implement_a_method_for_handling_errors_during_data_loading_saving_process.py`
+
+```python
+```python
+import sys
+import os
+from typing import Callable
+
+class DataHandler:
+    def __init__(self, load_data: Callable, save_data: Callable):
+        self.load_data = load_data
+        self.save_data = save_data
+
+    def load(self, filepath: str) -&gt; object:
+        try:
+            data = self.load_data(filepath)
+            return data
+        except Exception as e:
+            print(f&quot;Error occurred while loading data from {filepath}: {e}&quot;)
+            sys.exit(1)
+
+    def save(self, filepath: str, data: object):
+        try:
+            self.save_data(filepath, data)
+        except Exception as e:
+            print(f&quot;Error occurred while saving data to {filepath}: {e}&quot;)
+            sys.exit(1)
+</code></pre>
+<p>This code defines a <code>DataHandler</code> class that takes two functions (<code>load_data</code> and <code>save_data</code>) as arguments during initialization. The <code>load</code> method attempts to load data from a given file path, catching any exceptions and exiting the program if an error occurs. Similarly, the <code>save</code> method tries to save the provided data to a specified file path, also handling errors and terminating the program if necessary.</p>
+<pre><code>
+### `test_the_build_script_and_ensure_that_it_works_as_expected_with_different_configurations.py`
+
+```python
+```python
+import unittest
+from pathlib import Path
+from your_build_script import BuildScript
+
+class TestBuildScript(unittest.TestCase):
+    def setUp(self):
+        self.test_dir = Path(__file__).parent / 'tests'
+        self.bs = BuildScript(self.test_dir)
+
+    def test_build_with_default_config(self):
+        output = self.bs.run()
+        # Adjust this assertion according to the expected behavior of your build script
+        self.assertTrue(output, msg=&quot;Build failed with default config&quot;)
+
+    def test_build_with_custom_config(self):
+        custom_config_path = self.test_dir / 'custom_config.yaml'
+        output = self.bs.run_with_config(custom_config_path)
+        # Adjust this assertion according to the expected behavior of your build script
+        self.assertTrue(output, msg=&quot;Build failed with custom config&quot;)
+
+if __name__ == '__main__':
+    unittest.main()
+</code></pre>
+<p>This code provides a basic test structure for testing your build script using Python's built-in <code>unittest</code> module. It assumes that you have created a YAML configuration file (custom_config.yaml) in the 'tests' folder to test with custom configurations. Adjust the tests and assertions according to the expected behavior of your build script.</p>
+<pre><code>
+### `prepare_release_notes_detailing_changes_made_in_the_new_version_of_the_billing_calculator.py`
+
+```python
+```python
+class ReleaseNotes:
+    def __init__(self, version, changes):
+        self.version = version
+        self.changes = changes
+
+    def to_markdown(self):
+        notes = &quot;\n# Release Notes v{}&quot;.format(self.version)
+        notes += &quot;\n\n## Changes\n&quot;
+        for change in self.changes:
+            notes += &quot;- {}&quot;.format(change)
+        return notes
+
+def update_release_notes(old_version, new_version, changes):
+    if old_version and new_version:
+        release_notes = ReleaseNotes(new_version, changes)
+        previous_release_notes = ReleaseNotes(old_version, ['Previous release notes can be found here.'])
+        return [previous_release_notes.to_markdown(), release_notes.to_markdown()]
+    elif old_version:
+        return [ReleaseNotes(old_version, ['Previous release notes can be found here.']).to_markdown()]
+    else:
+        return [ReleaseNotes(new_version, changes).to_markdown()]
+</code></pre>
+<pre><code>
+### `write_code_to_connect_to_the_database_if_using_a_relational_database_system.py`
+
+```python
+```python
+import psycopg2
+
+def connect_db():
+    try:
+        conn = psycopg2.connect(
+            dbname=&quot;your_database_name&quot;,
+            user=&quot;your_username&quot;,
+            password=&quot;your_password&quot;,
+            host=&quot;your_host&quot;,
+            port=&quot;your_port&quot;
+        )
+        return conn
+    except Exception as e:
+        print(f&quot;Error: {e}&quot;)
+        return None
+</code></pre>
+<pre><code>
+### `test_the_deployed_application_in_the_staging_environment_and_fix_any_issues_found.py`
+
+```python
+```python
+import requests
+import json
+from time import sleep
+
+STAGING_API_URL = &quot;https://your-staging-app-url.com&quot;
+ISSUE_REPORT_URL = STAGING_API_URL + &quot;/report_issue&quot;
+
+def check_api():
+    response = requests.get(STAGING_API_URL)
+    if response.status_code != 200:
+        report_issue(&quot;API returned non-200 status code&quot;)
+
+def run_test_case(test_case):
+    response = requests.post(STAGING_API_URL + &quot;/run&quot;, json=test_case)
+    if response.status_code != 200:
+        report_issue(f&quot;Test case {test_case['name']} failed&quot;)
+
+def report_issue(message):
+    data = {&quot;message&quot;: message}
+    requests.post(ISSUE_REPORT_URL, json=data)
+
+def main():
+    test_cases = [
+        {&quot;name&quot;: &quot;Test case 1&quot;, &quot;parameters&quot;: {}},
+        # Add more test cases here...
+    ]
+
+    for test_case in test_cases:
+        run_test_case(test_case)
+
+    check_api()
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>```</p>
+<h2>🧠 Combined Effort Estimation (SBERT + Code Analysis)</h2>
+<h3>🔍 Top Similar GitHub Repositories (Filtered)</h3>
+<table>
+<thead>
+<tr>
+<th>Repository</th>
+<th>Estimated Effort (hours)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>huataihuang/cloud-atlas-draft</td>
+<td>209.44</td>
+<td>Cloud Compute Technology Guide</td>
+</tr>
+<tr>
+<td>NewcastleComputingScience/csc8110</td>
+<td>22.00</td>
+<td>Cloud Computing Coursework</td>
+</tr>
+<tr>
+<td>abhishekakumar/GatorSquad</td>
+<td>117.68</td>
+<td>Cloud Computing Course Project</td>
+</tr>
+<tr>
+<td>l-wang/15619-Cloud-Computing</td>
+<td>300.32</td>
+<td>Cloud Computing</td>
+</tr>
+<tr>
+<td>wenh/wenh-cloud2</td>
+<td>4.72</td>
+<td>cloud computing</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Average Effort (without outliers):</strong> 130.83 hours</p>
+<h3>💻 Estimated Effort for Your Generated Code</h3>
+<ul>
+<li><strong>owner</strong>: local</li>
+<li><strong>repo</strong>: 0b24e922-a408-4de2-bbaf-6794e7778e5a</li>
+<li><strong>C_comp</strong>: 12.623</li>
+<li><strong>complexity_mode</strong>: power</li>
+<li><strong>Optimistic</strong>: 9.45</li>
+<li><strong>Most_Likely</strong>: 12.62</li>
+<li><strong>Pessimistic</strong>: 32.53</li>
+<li><strong>Effort (days)</strong>: 16.67</li>
+<li><strong>estimated_effort_hours</strong>: 133.36</li>
+<li><strong>effort_details</strong>: {'C_comp': 12.623, 'Optimistic': 9.45, 'Most Likely': 12.62, 'Pessimistic': 32.53, 'Effort (days)': 16.67, 'hours': 146.73}</li>
+</ul>
+<h2>📜 Policy Analysis</h2>
+<h3>Default Policy</h3>
+<p>Ensure user input is validated. Avoid hardcoding credentials. Use secure file handling.</p>
+        </body>
+        </html>
+        
